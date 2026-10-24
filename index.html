@@ -4,22 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>وَمْض آرك | WAMD ARC</title>
-<meta name="description" content="وَمْض آرك علامة تقنية سعودية تبني حلولًا ذكية وتطبيقات ومنصات رقمية. الشرارة. المسار. المستقبل.">
+<meta name="description" content="وَمْض آرك علامة تقنية سعودية تبني حلولًا ذكية وتطبيقات ومنصات رقمية. WAMD ARC — Spark. Path. Future.">
 <meta name="theme-color" content="#111317">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wamdarc.com/">
 <meta property="og:title" content="وَمْض آرك | WAMD ARC">
-<meta property="og:description" content="الشرارة. المسار. المستقبل. — تطبيقات ولوحات بيانات ومتاجر وأتمتة.">
-<meta property="og:image" content="https://wamdarc.com/assets/og-image.png">
+<meta property="og:description" content="الشرارة. المسار. المستقبل. — Spark. Path. Future.">
+<meta property="og:image" content="https://wamdarc.com/assets/og-image.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@wamdarc">
+<link rel="alternate" hreflang="ar" href="https://wamdarc.com/?lang=ar">
+<link rel="alternate" hreflang="en" href="https://wamdarc.com/?lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#111317; --ink2:#0D0F12; --card:#171A1F; --line:#262A31;
@@ -30,16 +32,22 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:var(--ar);background:var(--ink);color:var(--white);line-height:1.8;-webkit-font-smoothing:antialiased}
+  html[lang=en] body{font-family:var(--en);line-height:1.7}
   a{color:inherit}
   .wrap{width:min(1140px, 100% - 32px);margin-inline:auto}
-  .en{font-family:var(--en);direction:ltr;unicode-bidi:isolate}
+  .ltr{direction:ltr;unicode-bidi:isolate}
 
   header{position:sticky;top:0;z-index:10;background:rgba(17,19,23,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
   .brand img{height:26px;display:block}
-  .nav ul{display:flex;gap:30px;list-style:none;font-size:15px}
+  .nav-right{display:flex;align-items:center;gap:28px}
+  .nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
   .nav ul a{text-decoration:none;color:var(--grey);transition:color .2s}
   .nav ul a:hover{color:var(--white)}
+  .lang{font:inherit;font-size:14px;background:none;color:var(--white);border:1px solid #3A3F48;border-radius:999px;padding:6px 16px;cursor:pointer;transition:border-color .2s}
+  .lang:hover{border-color:var(--orange)}
+  html[lang=ar] .lang{font-family:var(--en)}
+  html[lang=en] .lang{font-family:var(--ar)}
 
   .hero{position:relative;overflow:hidden;min-height:calc(100svh - 70px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 0 140px;
     background:radial-gradient(ellipse 70% 55% at 50% 40%, #1B1E25 0%, var(--ink) 70%)}
@@ -55,9 +63,11 @@
   @keyframes twinkle{0%,100%{transform:scale(1)}50%{transform:scale(1.18) rotate(45deg)}}
   @media (prefers-reduced-motion:reduce){.hero-logo .arc,.hero-logo .spark{animation:none}}
   .tag{font-size:clamp(24px, 4vw, 38px);font-weight:500;margin-top:10px}
-  .tag-en{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:300;letter-spacing:.12em;color:var(--grey);font-size:clamp(14px,1.8vw,18px)}
+  .tag2{font-weight:300;letter-spacing:.06em;color:var(--grey);font-size:clamp(15px,1.8vw,18px)}
+  html[lang=ar] .tag2{font-family:var(--en)}
+  html[lang=en] .tag2{font-family:var(--ar)}
   .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}
-  .btn{display:inline-flex;align-items:center;padding:12px 28px;border-radius:999px;font-weight:500;font-size:16px;text-decoration:none;transition:transform .2s, background .2s, border-color .2s}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 28px;border-radius:999px;font:inherit;font-weight:500;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s, background .2s, border-color .2s}
   .btn:hover{transform:translateY(-2px)}
   .btn-primary{background:var(--orange);color:#fff}
   .btn-ghost{border:1px solid #3A3F48;color:var(--white)}
@@ -66,11 +76,10 @@
   section{padding:110px 0;border-top:1px solid var(--line)}
   .eyebrow{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-size:13px;letter-spacing:.32em;color:var(--orange);margin-bottom:10px}
   h2{font-size:clamp(30px, 4.6vw, 46px);font-weight:700;line-height:1.35;margin-bottom:6px}
-  .h2en{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:300;color:var(--grey);font-size:18px;margin-bottom:18px}
-  .lead{font-size:18px;font-weight:300;color:var(--soft);max-width:680px}
+  .h2sub{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:300;color:var(--grey);font-size:18px;margin-bottom:18px}
+  html[lang=en] .h2sub, html[lang=en] .sub{display:none}
+  .lead{font-size:18px;font-weight:300;color:var(--soft);max-width:720px}
 
-  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
-  .about .en-text{font-family:var(--en);font-weight:300;color:var(--grey);font-size:16px;line-height:1.9;direction:ltr;text-align:left;border-right:1px solid var(--line);padding-right:48px}
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
   .pillars div{border-top:2px solid #3A3F48;padding-top:16px}
   .pillars div:first-child{border-top-color:var(--orange)}
@@ -89,20 +98,34 @@
   .product{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:6px}
   .product h3{font-size:22px;font-weight:700}
   .product p{color:var(--soft);font-size:15px}
-  .badge{direction:ltr;align-self:flex-start;margin-top:auto;padding-top:14px;font-family:var(--en);font-size:12px;letter-spacing:.2em;color:var(--orange)}
+  .badge{align-self:flex-start;margin-top:auto;padding-top:14px;font-size:13px;letter-spacing:.12em;color:var(--orange)}
   .badge.soon{color:var(--grey)}
-
   .values{background:var(--ink2)}
 
-  .contact .box{background:var(--paper);color:var(--ink);border-radius:30px;padding:56px;display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+  .contact .box{background:var(--paper);color:var(--ink);border-radius:30px;padding:56px;display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
   .contact .lead{color:#4A4F57}
-  .contact .h2en{color:#6B7079}
-  .links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .links a{display:flex;flex-direction:column;background:#fff;border-radius:16px;padding:14px 18px;text-decoration:none;transition:transform .2s}
+  .contact .h2sub{color:#6B7079}
+  .links{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+  .links a{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:16px 20px;text-decoration:none;transition:transform .2s}
   .links a:hover{transform:translateY(-2px)}
-  .links .lbl{font-size:14px;color:#6B7079}
-  .links .val{font-family:var(--en);font-weight:500;direction:ltr;text-align:right}
-  .links a.wide{grid-column:1 / -1}
+  .links .lbl{font-size:15px;color:#6B7079}
+  .links .val{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:500}
+
+  form{background:#fff;border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:16px}
+  form h3{font-size:22px;font-weight:700}
+  label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500;color:#3A3E45}
+  input,textarea{font:inherit;font-size:16px;color:var(--ink);background:#F6F6F4;border:1px solid #DADAD6;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .2s, box-shadow .2s}
+  input:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,90,31,.15)}
+  textarea{min-height:130px;resize:vertical}
+  input[type=email]{direction:ltr}
+  html[lang=ar] input[type=email]{text-align:right}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .hp{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;border:0 !important;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;opacity:0}
+  form{position:relative}
+  .q input{direction:ltr;max-width:280px}
+  .err{color:#C2410C;font-size:14px} .err:empty{display:none}
+  .note{font-size:13px;color:#6B7079}
+  form .btn{align-self:flex-start;padding:12px 36px}
 
   footer{padding:36px 0;color:var(--grey);font-size:14px;border-top:1px solid var(--line)}
   footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -111,15 +134,14 @@
   @media (max-width:960px){
     .grid{grid-template-columns:repeat(2,1fr)}
     .plist{grid-template-columns:1fr}
-    .about,.contact .box{grid-template-columns:1fr}
-    .about .en-text{border-right:0;padding-right:0}
+    .contact .box{grid-template-columns:1fr}
     .nav ul{display:none}
   }
   @media (max-width:560px){
-    .grid,.pillars{grid-template-columns:1fr}
+    .grid,.pillars,.row2{grid-template-columns:1fr}
     section{padding:80px 0}
-    .contact .box{padding:30px 20px}
-    .links{grid-template-columns:1fr}
+    .contact .box{padding:24px 16px}
+    form{padding:22px 18px}
   }
 </style>
 </head>
@@ -128,13 +150,16 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="WAMD ARC"><img src="assets/logo-horizontal-on-dark.svg" alt="WAMD ARC"></a>
-    <ul>
-      <li><a href="#about">من نحن</a></li>
-      <li><a href="#services">خدماتنا</a></li>
-      <li><a href="#products">منتجاتنا</a></li>
-      <li><a href="#values">قيمنا</a></li>
-      <li><a href="#contact">تواصل معنا</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul>
+        <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+        <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
+        <li><a href="#products" data-i18n="nav_products">منتجاتنا</a></li>
+        <li><a href="#values" data-i18n="nav_values">قيمنا</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
+      </ul>
+      <button class="lang" id="langBtn" type="button" data-i18n="lang_btn" aria-label="Switch language">EN</button>
+    </div>
   </div>
 </header>
 
@@ -145,11 +170,11 @@
     <div class="wrap inner">
       <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">وَمْض آرك — WAMD ARC</h1>
       <svg class="hero-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-40.0 -275.3 735.5 317.3" role="img" aria-label="WAMD ARC"><defs><linearGradient id="ga" x1="0" y1="0" x2="352" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F3F3F1" stop-opacity="0.0"/><stop offset="0.5" stop-color="#F3F3F1" stop-opacity="0.75"/><stop offset="1" stop-color="#F3F3F1" stop-opacity="1"/></linearGradient></defs><g transform="translate(140.93 -235.35) scale(0.8019)"><path class="arc" d="M 4 178 Q 104 33 362 25.6 L 362 29.4 Q 107 39 4 178 Z" fill="url(#ga)"/><path class="spark" d="M 380 -2.5 Q 385.6 21.9 410 27.5 Q 385.6 33.1 380 57.5 Q 374.4 33.1 350 27.5 Q 374.4 21.9 380 -2.5 Z" fill="#FF5A1F"/></g><path d="M26.6 0.0 3.2 -70.0H13.5L35.0 -5.4H29.8L52.1 -70.0H61.300000000000004L83.10000000000001 -5.4H78.10000000000001L99.9 -70.0H109.4L86.0 0.0H75.5L55.1 -59.900000000000006H57.800000000000004L37.300000000000004 0.0Z M121.00000000000001 0.0 152.70000000000002 -70.0H162.60000000000002L194.4 0.0H183.9L155.60000000000002 -64.4H159.60000000000002L131.3 0.0ZM134.5 -17.5 137.20000000000002 -25.5H176.60000000000002L179.5 -17.5Z M213.3 0.0V-70.0H221.5L252.9 -17.1H248.5L279.5 -70.0H287.70000000000005L287.8 0.0H278.20000000000005L278.1 -54.900000000000006H280.40000000000003L252.8 -8.5H248.20000000000002L220.4 -54.900000000000006H222.9V0.0Z M317.3 0.0V-70.0H346.8Q358.0 -70.0 366.55 -65.6Q375.1 -61.2 379.85 -53.300000000000004Q384.6 -45.400000000000006 384.6 -35.0Q384.6 -24.6 379.85 -16.700000000000003Q375.1 -8.8 366.55 -4.4Q358.0 0.0 346.8 0.0ZM327.3 -8.700000000000001H346.20000000000005Q354.90000000000003 -8.700000000000001 361.25 -12.0Q367.6 -15.3 371.1 -21.25Q374.6 -27.200000000000003 374.6 -35.0Q374.6 -42.900000000000006 371.1 -48.800000000000004Q367.6 -54.7 361.25 -58.0Q354.90000000000003 -61.300000000000004 346.20000000000005 -61.300000000000004H327.3Z" fill="#F3F3F1"/><path d="M425.90000000000003 0.0 458.1 -70.0H463.20000000000005L495.40000000000003 0.0H489.90000000000003L459.50000000000006 -66.8H461.70000000000005L431.40000000000003 0.0ZM437.70000000000005 -19.700000000000003 439.40000000000003 -24.0H481.30000000000007L483.00000000000006 -19.700000000000003Z M516.6 0.0V-70.0H541.7Q554.9000000000001 -70.0 562.4000000000001 -63.8Q569.9000000000001 -57.6 569.9000000000001 -46.400000000000006Q569.9000000000001 -39.1 566.5 -33.85Q563.1 -28.6 556.8 -25.75Q550.5 -22.900000000000002 541.7 -22.900000000000002H519.4000000000001L521.7 -25.3V0.0ZM565.2 0.0 547.0 -25.400000000000002H552.8000000000001L571.0 0.0ZM521.7 -25.0 519.4000000000001 -27.400000000000002H541.7Q553.0 -27.400000000000002 558.85 -32.4Q564.7 -37.4 564.7 -46.400000000000006Q564.7 -55.5 558.85 -60.45Q553.0 -65.4 541.7 -65.4H519.4000000000001L521.7 -67.9Z M626.7 0.5Q618.9000000000001 0.5 612.2500000000001 -2.1500000000000004Q605.6000000000001 -4.800000000000001 600.7 -9.600000000000001Q595.8000000000001 -14.4 593.1000000000001 -20.85Q590.4000000000001 -27.3 590.4000000000001 -35.0Q590.4000000000001 -42.7 593.1000000000001 -49.150000000000006Q595.8000000000001 -55.6 600.75 -60.400000000000006Q605.7 -65.2 612.3000000000001 -67.85Q618.9000000000001 -70.5 626.7 -70.5Q634.1000000000001 -70.5 640.5500000000002 -68.1Q647.0000000000001 -65.7 651.6000000000001 -60.800000000000004L648.4000000000001 -57.5Q643.9000000000001 -61.900000000000006 638.45 -63.85Q633.0000000000001 -65.8 626.9000000000001 -65.8Q620.2 -65.8 614.45 -63.5Q608.7 -61.2 604.45 -57.0Q600.2 -52.800000000000004 597.8500000000001 -47.2Q595.5000000000001 -41.6 595.5000000000001 -35.0Q595.5000000000001 -28.400000000000002 597.8500000000001 -22.8Q600.2 -17.2 604.45 -13.0Q608.7 -8.8 614.45 -6.5Q620.2 -4.2 626.9000000000001 -4.2Q633.0000000000001 -4.2 638.45 -6.15Q643.9000000000001 -8.1 648.4000000000001 -12.600000000000001L651.6000000000001 -9.3Q647.0000000000001 -4.4 640.5500000000002 -1.9500000000000002Q634.1000000000001 0.5 626.7 0.5Z" fill="#F3F3F1"/></svg>
-      <p class="tag">الشرارة. المسار. المستقبل.</p>
-      <p class="tag-en">Spark. Path. Future.</p>
+      <p class="tag" data-i18n="tag">الشرارة. المسار. المستقبل.</p>
+      <p class="tag2" dir="auto" data-i18n="tag2">Spark. Path. Future.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#contact">تواصل معنا</a>
-        <a class="btn btn-ghost" href="#services">خدماتنا</a>
+        <a class="btn btn-primary" href="#contact" data-i18n="cta_contact">تواصل معنا</a>
+        <a class="btn btn-ghost" href="#services" data-i18n="cta_services">خدماتنا</a>
       </div>
     </div>
   </div>
@@ -157,17 +182,12 @@
   <section id="about">
     <div class="wrap">
       <p class="eyebrow">WHO WE ARE</p>
-      <div class="about">
-        <div>
-          <h2>من نحن؟</h2>
-          <p class="lead">وَمْض آرك علامة تقنية سعودية طموحة، تبني حلولًا ذكية وتقنيات متقدمة تسهم في تشكيل مستقبل أكثر اتصالًا وذكاءً. نؤمن أن الابتكار يبدأ بشرارة، ثم يأخذ مساره إلى واقع ملموس.</p>
-        </div>
-        <p class="en-text">WAMD ARC is an ambitious Saudi tech brand, building intelligent solutions and advanced technologies that shape a more connected and intelligent future. We believe innovation starts with a spark — and then takes its path to a tangible reality.</p>
-      </div>
+      <h2 data-i18n="about_title">من نحن؟</h2>
+      <p class="lead" data-i18n="about_text">وَمْض آرك علامة تقنية سعودية طموحة، تبني حلولًا ذكية وتقنيات متقدمة تسهم في تشكيل مستقبل أكثر اتصالًا وذكاءً. نؤمن أن الابتكار يبدأ بشرارة، ثم يأخذ مساره إلى واقع ملموس.</p>
       <div class="pillars">
-        <div><h3>الشرارة</h3><p>كل منتج يبدأ بفكرة جريئة</p></div>
-        <div><h3>المسار</h3><p>خطوات واضحة من الفكرة إلى الإطلاق</p></div>
-        <div><h3>المستقبل</h3><p>منتجات تكبر وتستمر مع الناس</p></div>
+        <div><h3 data-i18n="p1_t">الشرارة</h3><p data-i18n="p1_d">كل منتج يبدأ بفكرة جريئة</p></div>
+        <div><h3 data-i18n="p2_t">المسار</h3><p data-i18n="p2_d">خطوات واضحة من الفكرة إلى الإطلاق</p></div>
+        <div><h3 data-i18n="p3_t">المستقبل</h3><p data-i18n="p3_d">منتجات تكبر وتستمر مع الناس</p></div>
       </div>
     </div>
   </section>
@@ -175,27 +195,22 @@
   <section id="services">
     <div class="wrap">
       <p class="eyebrow">SERVICES</p>
-      <h2>خدماتنا</h2>
-      <p class="h2en">What we build</p>
-      <div class="grid">
-        <article class="card"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>تطبيقات الويب والجوال</h3><p class="sub">Web &amp; Mobile Apps</p><p>تطبيقات سريعة وبسيطة تشتغل على كل الأجهزة.</p></article>
-        <article class="card"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><h3>لوحات البيانات</h3><p class="sub">Dashboards</p><p>أرقامك واضحة في مكان واحد تساعدك تقرر.</p></article>
-        <article class="card"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><h3>المتاجر الإلكترونية</h3><p class="sub">E-commerce</p><p>متاجر أنيقة تبيع منتجاتك بسهولة.</p></article>
-        <article class="card"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>الأتمتة والذكاء الاصطناعي</h3><p class="sub">Automation &amp; AI</p><p>نوفّر وقتك بأتمتة المهام وأدوات ذكية.</p></article>
-      </div>
+      <h2 data-i18n="services_title">خدماتنا</h2>
+      <p class="h2sub" data-i18n="services_sub">What we build</p>
+      <div class="grid"><article class="card"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3 data-i18n="s1_t">تطبيقات الويب والجوال</h3><p class="sub" data-i18n="s1_s">Web & Mobile Apps</p><p data-i18n="s1_d">تطبيقات سريعة وبسيطة تشتغل على كل الأجهزة.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><h3 data-i18n="s2_t">لوحات البيانات</h3><p class="sub" data-i18n="s2_s">Dashboards</p><p data-i18n="s2_d">أرقامك واضحة في مكان واحد تساعدك تقرر.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><h3 data-i18n="s3_t">المتاجر الإلكترونية</h3><p class="sub" data-i18n="s3_s">E-commerce</p><p data-i18n="s3_d">متاجر أنيقة تبيع منتجاتك بسهولة.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3 data-i18n="s4_t">الأتمتة والذكاء الاصطناعي</h3><p class="sub" data-i18n="s4_s">Automation & AI</p><p data-i18n="s4_d">نوفّر وقتك بأتمتة المهام وأدوات ذكية.</p></article></div>
     </div>
   </section>
 
   <section id="products">
     <div class="wrap">
       <p class="eyebrow">PRODUCTS</p>
-      <h2>منتجاتنا</h2>
-      <p class="h2en">Built by WAMD ARC</p>
+      <h2 data-i18n="products_title">منتجاتنا</h2>
+      <p class="h2sub" data-i18n="products_sub">Built by WAMD ARC</p>
       <div class="plist">
         <!-- لربط سهم: حوّل هذا العنصر إلى <a class="product" href="رابط سهم"> -->
-        <div class="product"><h3>سهم</h3><p>بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى بدون إنترنت.</p><span class="badge">LIVE</span></div>
-        <div class="product"><h3>المصاريف</h3><p>تتبّع مصاريفك اليومية بلمسة من جوالك.</p><span class="badge soon">COMING SOON</span></div>
-        <div class="product"><h3>متتبع الأسعار</h3><p>قارن أسعار مشترياتك وتابع تغيّرها.</p><span class="badge soon">COMING SOON</span></div>
+        <div class="product"><h3 data-i18n="pr1_t">سهم</h3><p data-i18n="pr1_d">بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى بدون إنترنت.</p><span class="badge" data-i18n="live">متاح</span></div>
+        <div class="product"><h3 data-i18n="pr2_t">المصاريف</h3><p data-i18n="pr2_d">تتبّع مصاريفك اليومية بلمسة من جوالك.</p><span class="badge soon" data-i18n="soon">قريبًا</span></div>
+        <div class="product"><h3 data-i18n="pr3_t">متتبع الأسعار</h3><p data-i18n="pr3_d">قارن أسعار مشترياتك وتابع تغيّرها.</p><span class="badge soon" data-i18n="soon">قريبًا</span></div>
       </div>
     </div>
   </section>
@@ -203,13 +218,9 @@
   <section id="values" class="values">
     <div class="wrap">
       <p class="eyebrow">OUR VALUES</p>
-      <h2>قيمنا</h2>
-      <div class="grid">
-        <article class="card"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg><h3>الابتكار</h3><p class="sub">Innovation</p><p>تحويل الأفكار إلى حلول.</p></article>
-        <article class="card"><svg viewBox="0 0 24 24"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg><h3>التميّز</h3><p class="sub">Excellence</p><p>الجودة في كل تفصيلة.</p></article>
-        <article class="card"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.2 15.8M13.2 7.2l4.6 8.6M7.5 18h9"/></svg><h3>التكامل</h3><p class="sub">Integration</p><p>ربط التقنية بالإنسان.</p></article>
-        <article class="card"><svg viewBox="0 0 24 24"><path d="M3 21 12 4l9 17H3z"/><path d="M8 21l4-8 4 8"/></svg><h3>الاستدامة</h3><p class="sub">Sustainability</p><p>بناء مستقبل أفضل.</p></article>
-      </div>
+      <h2 data-i18n="values_title">قيمنا</h2>
+      <p class="h2sub" data-i18n="values_sub">Our values</p>
+      <div class="grid"><article class="card"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg><h3 data-i18n="v1_t">الابتكار</h3><p class="sub" data-i18n="v1_s">Innovation</p><p data-i18n="v1_d">تحويل الأفكار إلى حلول.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg><h3 data-i18n="v2_t">التميّز</h3><p class="sub" data-i18n="v2_s">Excellence</p><p data-i18n="v2_d">الجودة في كل تفصيلة.</p></article><article class="card"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.2 15.8M13.2 7.2l4.6 8.6M7.5 18h9"/></svg><h3 data-i18n="v3_t">التكامل</h3><p class="sub" data-i18n="v3_s">Integration</p><p data-i18n="v3_d">ربط التقنية بالإنسان.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M3 21 12 4l9 17H3z"/><path d="M8 21l4-8 4 8"/></svg><h3 data-i18n="v4_t">الاستدامة</h3><p class="sub" data-i18n="v4_s">Sustainability</p><p data-i18n="v4_d">بناء مستقبل أفضل.</p></article></div>
     </div>
   </section>
 
@@ -218,20 +229,33 @@
       <div class="box">
         <div>
           <p class="eyebrow">CONTACT</p>
-          <h2>تواصل معنا</h2>
-          <p class="h2en">Let’s build your next spark</p>
-          <p class="lead">عندك فكرة تبي لها مسار؟ راسلنا ونرد عليك في أقرب وقت.</p>
-          <div class="cta" style="justify-content:flex-start"><a class="btn btn-primary" href="mailto:hello@wamdarc.com">أرسل لنا إيميل</a></div>
+          <h2 data-i18n="contact_title">تواصل معنا</h2>
+          <p class="h2sub" data-i18n="contact_sub">Let’s build your next spark</p>
+          <p class="lead" data-i18n="contact_lead">عندك فكرة تبي لها مسار؟ راسلنا ونرد عليك في أقرب وقت.</p>
+          <div class="links">
+            <a href="mailto:contact@wamdarc.com"><span class="lbl" data-i18n="email_lbl">البريد</span><span class="val">contact@wamdarc.com</span></a>
+            <a href="https://x.com/wamdarc" target="_blank" rel="noopener"><span class="lbl" data-i18n="x_lbl">إكس</span><span class="val">@wamdarc</span></a>
+            <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener"><span class="lbl" data-i18n="ig_lbl">إنستقرام</span><span class="val">@wamdarc</span></a>
+          </div>
         </div>
-        <div class="links">
-          <a class="wide" href="mailto:hello@wamdarc.com"><span class="lbl">البريد</span><span class="val">hello@wamdarc.com</span></a>
-          <a href="https://x.com/wamdarc" target="_blank" rel="noopener"><span class="lbl">إكس</span><span class="val">@wamdarc</span></a>
-          <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener"><span class="lbl">إنستقرام</span><span class="val">@wamdarc</span></a>
-          <a href="https://www.tiktok.com/@wamd.arc" target="_blank" rel="noopener"><span class="lbl">تيك توك</span><span class="val">@wamd.arc</span></a>
-          <a href="https://www.linkedin.com/company/wamdarc" target="_blank" rel="noopener"><span class="lbl">لينكدإن</span><span class="val">wamdarc</span></a>
-          <a href="https://www.youtube.com/@wamdarc" target="_blank" rel="noopener"><span class="lbl">يوتيوب</span><span class="val">@wamdarc</span></a>
-          <a href="https://github.com/wamdarc" target="_blank" rel="noopener"><span class="lbl">جت هب</span><span class="val">wamdarc</span></a>
-        </div>
+
+        <form id="contactForm" action="https://formsubmit.co/contact@wamdarc.com" method="POST" novalidate>
+          <h3 data-i18n="form_title">أرسل لنا رسالة</h3>
+          <input type="hidden" name="_subject" id="fSubject" value="رسالة جديدة من موقع wamdarc.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" id="fNext" value="https://wamdarc.com/thanks.html">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="row2">
+            <label><span data-i18n="f_name">الاسم</span><input type="text" name="name" required maxlength="80" data-i18n-ph="ph_name" placeholder="اسمك الكريم"></label>
+            <label><span data-i18n="f_email">بريدك الإلكتروني</span><input type="email" name="email" required maxlength="120" data-i18n-ph="ph_email" placeholder="name@example.com"></label>
+          </div>
+          <label><span data-i18n="f_msg">رسالتك</span><textarea name="message" required minlength="10" maxlength="3000" data-i18n-ph="ph_msg" placeholder="اكتب رسالتك هنا…"></textarea></label>
+          <label class="q"><span id="qText"></span><input type="text" id="qAns" inputmode="numeric" autocomplete="off" required data-i18n-ph="ph_q" placeholder="اكتب الناتج بالأرقام"></label>
+          <p class="err" id="fErr" role="alert"></p>
+          <button class="btn btn-primary" type="submit" data-i18n="f_send">إرسال</button>
+          <p class="note" data-i18n="f_note">محمي من الرسائل المزعجة. بعد الإرسال قد يُطلب منك تأكيد أنك لست روبوتًا.</p>
+        </form>
       </div>
     </div>
   </section>
@@ -239,10 +263,50 @@
 
 <footer>
   <div class="wrap row">
-    <span>© <span id="y">2026</span> وَمْض آرك. جميع الحقوق محفوظة.</span>
+    <span id="rights"></span>
     <img src="assets/logo-horizontal-on-dark.svg" alt="WAMD ARC">
   </div>
 </footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<script>
+(function(){
+  var T = {"ar": {"title": "وَمْض آرك | WAMD ARC", "nav_about": "من نحن", "nav_services": "خدماتنا", "nav_products": "منتجاتنا", "nav_values": "قيمنا", "nav_contact": "تواصل معنا", "lang_btn": "EN", "tag": "الشرارة. المسار. المستقبل.", "tag2": "Spark. Path. Future.", "cta_contact": "تواصل معنا", "cta_services": "خدماتنا", "about_title": "من نحن؟", "about_text": "وَمْض آرك علامة تقنية سعودية طموحة، تبني حلولًا ذكية وتقنيات متقدمة تسهم في تشكيل مستقبل أكثر اتصالًا وذكاءً. نؤمن أن الابتكار يبدأ بشرارة، ثم يأخذ مساره إلى واقع ملموس.", "p1_t": "الشرارة", "p1_d": "كل منتج يبدأ بفكرة جريئة", "p2_t": "المسار", "p2_d": "خطوات واضحة من الفكرة إلى الإطلاق", "p3_t": "المستقبل", "p3_d": "منتجات تكبر وتستمر مع الناس", "services_title": "خدماتنا", "services_sub": "What we build", "s1_t": "تطبيقات الويب والجوال", "s1_s": "Web & Mobile Apps", "s1_d": "تطبيقات سريعة وبسيطة تشتغل على كل الأجهزة.", "s2_t": "لوحات البيانات", "s2_s": "Dashboards", "s2_d": "أرقامك واضحة في مكان واحد تساعدك تقرر.", "s3_t": "المتاجر الإلكترونية", "s3_s": "E-commerce", "s3_d": "متاجر أنيقة تبيع منتجاتك بسهولة.", "s4_t": "الأتمتة والذكاء الاصطناعي", "s4_s": "Automation & AI", "s4_d": "نوفّر وقتك بأتمتة المهام وأدوات ذكية.", "products_title": "منتجاتنا", "products_sub": "Built by WAMD ARC", "pr1_t": "سهم", "pr1_d": "بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى بدون إنترنت.", "pr2_t": "المصاريف", "pr2_d": "تتبّع مصاريفك اليومية بلمسة من جوالك.", "pr3_t": "متتبع الأسعار", "pr3_d": "قارن أسعار مشترياتك وتابع تغيّرها.", "live": "متاح", "soon": "قريبًا", "values_title": "قيمنا", "values_sub": "Our values", "v1_t": "الابتكار", "v1_s": "Innovation", "v1_d": "تحويل الأفكار إلى حلول.", "v2_t": "التميّز", "v2_s": "Excellence", "v2_d": "الجودة في كل تفصيلة.", "v3_t": "التكامل", "v3_s": "Integration", "v3_d": "ربط التقنية بالإنسان.", "v4_t": "الاستدامة", "v4_s": "Sustainability", "v4_d": "بناء مستقبل أفضل.", "contact_title": "تواصل معنا", "contact_sub": "Let’s build your next spark", "contact_lead": "عندك فكرة تبي لها مسار؟ راسلنا ونرد عليك في أقرب وقت.", "email_lbl": "البريد", "x_lbl": "إكس", "ig_lbl": "إنستقرام", "form_title": "أرسل لنا رسالة", "f_name": "الاسم", "f_email": "بريدك الإلكتروني", "f_msg": "رسالتك", "ph_name": "اسمك الكريم", "ph_email": "name@example.com", "ph_msg": "اكتب رسالتك هنا…", "f_q": "سؤال تحقق: كم ناتج {a} + {b}؟", "ph_q": "اكتب الناتج بالأرقام", "f_send": "إرسال", "err_q": "الناتج غير صحيح، حاول مرة ثانية.", "f_note": "محمي من الرسائل المزعجة. بعد الإرسال قد يُطلب منك تأكيد أنك لست روبوتًا.", "subject": "رسالة جديدة من موقع wamdarc.com", "rights": "© {y} وَمْض آرك. جميع الحقوق محفوظة."}, "en": {"title": "WAMD ARC | وَمْض آرك", "nav_about": "About", "nav_services": "Services", "nav_products": "Products", "nav_values": "Values", "nav_contact": "Contact", "lang_btn": "عربي", "tag": "Spark. Path. Future.", "tag2": "الشرارة. المسار. المستقبل.", "cta_contact": "Contact us", "cta_services": "Our services", "about_title": "Who we are", "about_text": "WAMD ARC is an ambitious Saudi tech brand, building intelligent solutions and advanced technologies that shape a more connected and intelligent future. We believe innovation starts with a spark — and then takes its path to a tangible reality.", "p1_t": "Spark", "p1_d": "Every product starts with a bold idea", "p2_t": "Path", "p2_d": "Clear steps from idea to launch", "p3_t": "Future", "p3_d": "Products that grow with people", "services_title": "Services", "services_sub": "", "s1_t": "Web & Mobile Apps", "s1_s": "", "s1_d": "Fast, simple apps that work on every device.", "s2_t": "Dashboards", "s2_s": "", "s2_d": "All your numbers, clear and in one place.", "s3_t": "E-commerce", "s3_s": "", "s3_d": "Elegant stores that make selling easy.", "s4_t": "Automation & AI", "s4_s": "", "s4_d": "Save time with automation and smart tools.", "products_title": "Products", "products_sub": "", "pr1_t": "Sahm", "pr1_d": "A simple compass that points you to your destination with one arrow — even offline.", "pr2_t": "Expenses", "pr2_d": "Track your daily spending with a tap.", "pr3_t": "Price Tracker", "pr3_d": "Compare prices and follow how they change.", "live": "LIVE", "soon": "COMING SOON", "values_title": "Our values", "values_sub": "", "v1_t": "Innovation", "v1_s": "", "v1_d": "Turning ideas into solutions.", "v2_t": "Excellence", "v2_s": "", "v2_d": "Quality in every detail.", "v3_t": "Integration", "v3_s": "", "v3_d": "Connecting technology and people.", "v4_t": "Sustainability", "v4_s": "", "v4_d": "Building a better tomorrow.", "contact_title": "Contact us", "contact_sub": "", "contact_lead": "Have an idea that needs a path? Send us a message and we’ll get back to you soon.", "email_lbl": "Email", "x_lbl": "X", "ig_lbl": "Instagram", "form_title": "Send us a message", "f_name": "Name", "f_email": "Your email", "f_msg": "Message", "ph_name": "Your name", "ph_email": "name@example.com", "ph_msg": "Write your message…", "f_q": "Quick check: what is {a} + {b}?", "ph_q": "Type the answer in digits", "f_send": "Send", "err_q": "That answer isn’t right — please try again.", "f_note": "Protected from spam. After sending you may be asked to confirm you’re not a robot.", "subject": "New message from wamdarc.com", "rights": "© {y} WAMD ARC. All rights reserved."}};
+  var a = 2 + Math.floor(Math.random()*8), b = 1 + Math.floor(Math.random()*9);
+  var lang = 'ar';
+  function fmt(s, o){ return s.replace(/\{(\w)\}/g, function(_, k){ return o[k]; }); }
+  function setLang(l){
+    lang = (l === 'en') ? 'en' : 'ar';
+    var d = T[lang], h = document.documentElement;
+    h.lang = lang; h.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.title = d.title;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ var v = d[el.getAttribute('data-i18n')]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){ var v = d[el.getAttribute('data-i18n-ph')]; if (v != null) el.placeholder = v; });
+    document.getElementById('qText').textContent = fmt(d.f_q, {a:a, b:b});
+    document.getElementById('rights').textContent = fmt(d.rights, {y:new Date().getFullYear()});
+    document.getElementById('fSubject').value = d.subject;
+    document.getElementById('fNext').value = 'https://wamdarc.com/thanks.html?lang=' + lang;
+    document.getElementById('fErr').textContent = '';
+    try { localStorage.setItem('lang', lang); } catch(e) {}
+  }
+  var q = new URLSearchParams(location.search).get('lang'), saved = null;
+  try { saved = localStorage.getItem('lang'); } catch(e) {}
+  setLang(q || saved || 'ar');
+  document.getElementById('langBtn').addEventListener('click', function(){ setLang(lang === 'ar' ? 'en' : 'ar'); });
+
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    var err = document.getElementById('fErr');
+    var ans = document.getElementById('qAns').value.trim().replace(/[٠-٩]/g, function(c){ return '٠١٢٣٤٥٦٧٨٩'.indexOf(c); });
+    if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); return; }
+    if (parseInt(ans, 10) !== a + b) {
+      e.preventDefault(); err.textContent = T[lang].err_q;
+      a = 2 + Math.floor(Math.random()*8); b = 1 + Math.floor(Math.random()*9);
+      document.getElementById('qText').textContent = fmt(T[lang].f_q, {a:a, b:b});
+      document.getElementById('qAns').value = '';
+      return;
+    }
+  });
+})();
+</script>
 </body>
 </html>

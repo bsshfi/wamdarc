@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شكرًا | WAMD ARC</title><meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;min-height:100svh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 70% 55% at 50% 40%,#1B1E25 0%,#111317 70%);color:#F3F3F1;font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif;text-align:center;padding:24px}
+  html[lang=en] body{font-family:'Montserrat',Arial,sans-serif}
+  img{width:min(360px,70vw)} h1{font-size:clamp(28px,5vw,42px);margin:36px 0 8px} p{color:#B9BEC6;font-size:18px;margin:0 0 32px}
+  a{display:inline-block;background:#FF5A1F;color:#fff;text-decoration:none;padding:12px 30px;border-radius:999px;font-weight:600}
+</style></head>
+<body><main>
+  <img src="assets/logo-stacked-on-dark.svg" alt="WAMD ARC">
+  <h1 id="t">وصلتنا رسالتك، شكرًا لك</h1>
+  <p id="d">بنرد عليك في أقرب وقت.</p>
+  <a id="b" href="/">العودة للموقع</a>
+</main>
+<script>
+  var l = new URLSearchParams(location.search).get('lang');
+  try { l = l || localStorage.getItem('lang'); } catch(e) {}
+  if (l === 'en') {
+    document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; document.title = 'Thank you | WAMD ARC';
+    document.getElementById('t').textContent = 'Message received — thank you';
+    document.getElementById('d').textContent = 'We’ll get back to you soon.';
+    var b = document.getElementById('b'); b.textContent = 'Back to website'; b.href = '/?lang=en';
+  }
+</script></body></html>
