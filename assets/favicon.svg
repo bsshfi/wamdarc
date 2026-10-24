@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#1C1B3A"/>
-  <g transform="translate(14 8) scale(0.18)">
-    <path d="M 30 240 L 30 130 Q 30 66 100 30 Q 170 66 170 130 L 170 240" fill="none" stroke="#F4ECE1" stroke-width="30" stroke-linejoin="miter" stroke-miterlimit="10"/>
-    <rect x="88" y="150" width="24" height="76" rx="3" fill="#E8B04B"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><defs><linearGradient id="gl" x1="0" y1="0" x2="352" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F3F3F1" stop-opacity="0.35"/><stop offset="0.5" stop-color="#F3F3F1" stop-opacity="0.9"/><stop offset="1" stop-color="#F3F3F1" stop-opacity="1"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#111317"/><g transform="translate(10.24 23.67) scale(0.1042)"><path d="M 6 176 Q 100 26 352 22 L 352 36 Q 112 46 6 176 Z" fill="url(#gl)"/><path d="M 378 -19 Q 387 20 426 29 Q 387 38 378 77 Q 369 38 330 29 Q 369 20 378 -19 Z" fill="#FF5A1F"/></g></svg>
