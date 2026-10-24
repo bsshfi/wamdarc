@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وَمْض آرك | WAMD ARC</title>
+<meta name="description" content="وَمْض آرك علامة تقنية سعودية تبني تطبيقات ومنصات ذكية. لكل فكرة بوابة.">
+<meta property="og:title" content="وَمْض آرك | WAMD ARC">
+<meta property="og:description" content="لكل فكرة بوابة — تطبيقات ولوحات بيانات ومتاجر وأتمتة.">
+<meta name="theme-color" content="#1C1B3A">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1B3A; --dusk:#26254A; --line:#34335E;
+    --sand:#F4ECE1; --sand2:#EADFCF; --paper:#FBF6EF;
+    --clay:#D2603A; --clay-text:#A8441F; --saffron:#E8B04B;
+    --muted-dark:#B3AFCB; --muted-light:#5E5A73;
+    --ar:'Noto Kufi Arabic', Tahoma, sans-serif;
+    --en:'Space Grotesk', Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--ar);background:var(--sand);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{width:min(1120px, 100% - 32px);margin-inline:auto}
+  .en{font-family:var(--en);direction:ltr;unicode-bidi:isolate}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:rgba(28,27,58,.92);backdrop-filter:blur(10px);color:var(--sand);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand svg{width:26px;height:31px}
+  .brand .en{font-size:22px;font-weight:700;letter-spacing:-.5px}
+  .brand .en span{font-weight:300;color:var(--saffron)}
+  .nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
+  .nav ul a{text-decoration:none;color:var(--muted-dark);transition:color .2s}
+  .nav ul a:hover{color:var(--sand)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:var(--ink);color:var(--sand);text-align:center;padding:96px 0 112px}
+  .hero .pattern{position:absolute;inset:0;opacity:.9;pointer-events:none}
+  .hero .glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 45%, var(--ink) 30%, rgba(28,27,58,.85) 55%, rgba(28,27,58,0) 100%)}
+  .hero .inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .mark{width:140px;height:168px}
+  .mark .cursor{animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.mark .cursor{animation:none}}
+  .wordmark{font-family:var(--en);font-size:clamp(56px, 11vw, 120px);font-weight:700;letter-spacing:-.04em;line-height:1;direction:ltr}
+  .wordmark span{font-weight:300;color:var(--saffron)}
+  .ar-name{width:min(240px, 60vw);height:auto}
+  .tagline{font-size:clamp(22px, 3.4vw, 32px);font-weight:300;color:var(--muted-dark)}
+  .tagline-en{font-family:var(--en);font-size:14px;letter-spacing:.35em;color:var(--saffron)}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s, background .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--saffron);color:var(--ink)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--sand)}
+  .btn-ghost:hover{background:var(--dusk)}
+
+  /* Sections */
+  section{padding:96px 0}
+  .eyebrow{font-family:var(--en);font-size:13px;letter-spacing:.3em;color:var(--clay-text);margin-bottom:8px}
+  h2{font-size:clamp(30px, 4.6vw, 44px);font-weight:700;line-height:1.4;margin-bottom:12px}
+  .lead{font-size:18px;font-weight:300;color:var(--muted-light);max-width:640px}
+
+  .about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+  .about .quote{background:var(--ink);color:var(--sand);border-radius:28px;padding:40px;position:relative;overflow:hidden}
+  .about .quote p{font-size:26px;font-weight:600;line-height:1.6;position:relative}
+  .about .quote small{display:block;margin-top:12px;font-family:var(--en);color:var(--saffron);letter-spacing:.2em;font-size:12px}
+
+  .services{background:var(--paper)}
+  .grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:20px;margin-top:40px}
+  .card{background:var(--sand);border:1px solid #E0D3C1;border-radius:22px;padding:28px 24px;transition:transform .25s, box-shadow .25s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(28,27,58,.10)}
+  .card .icon{width:48px;height:48px;border-radius:14px;background:var(--ink);display:grid;place-items:center;margin-bottom:16px}
+  .card .icon svg{width:24px;height:24px;stroke:var(--saffron);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:20px;font-weight:700;line-height:1.5;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted-light)}
+
+  .products{background:var(--ink);color:var(--sand)}
+  .products .eyebrow{color:var(--saffron)}
+  .products .lead{color:var(--muted-dark)}
+  .plist{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;margin-top:40px}
+  .product{background:var(--dusk);border-radius:22px;padding:28px;border-top:3px solid var(--saffron);display:flex;flex-direction:column;gap:6px;text-decoration:none}
+  .product.soon{border-top-color:var(--clay)}
+  .product h3{font-size:22px;font-weight:700;line-height:1.5}
+  .product p{color:var(--muted-dark);font-size:15px}
+  .product .url{font-family:var(--en);font-size:13px;color:var(--saffron);direction:ltr;text-align:right;margin-top:auto;padding-top:12px}
+  .product.soon .url{color:#E07A57}
+
+  .contact .box{background:var(--sand2);border-radius:28px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .links{display:flex;flex-direction:column;gap:12px}
+  .links a{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);border-radius:16px;padding:14px 20px;text-decoration:none;transition:background .2s}
+  .links a:hover{background:#fff8ee}
+  .links .lbl{font-weight:600}
+  .links .val{font-family:var(--en);color:var(--clay-text);direction:ltr}
+
+  footer{background:var(--ink);color:var(--muted-dark);padding:32px 0;font-size:14px}
+  footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2, 1fr)}
+    .plist{grid-template-columns:1fr}
+    .about, .contact .box{grid-template-columns:1fr}
+    .nav ul{display:none}
+  }
+  @media (max-width:520px){
+    .grid{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .contact .box{padding:28px 20px}
+    .hero{padding:72px 0 88px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="وَمْض آرك">
+      <svg viewBox="0 0 200 240" aria-hidden="true"><path d="M 30 240 L 30 130 Q 30 66 100 30 Q 170 66 170 130 L 170 240" fill="none" stroke="#F4ECE1" stroke-width="30" stroke-linejoin="miter" stroke-miterlimit="10"/><rect x="88" y="150" width="24" height="76" rx="3" fill="#E8B04B"/></svg>
+      <span class="en">wamd<span>arc</span></span>
+    </a>
+    <ul>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#products">منتجاتنا</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <svg class="pattern" aria-hidden="true" width="100%" height="100%"><defs><pattern id="arches" width="96" height="120" patternUnits="userSpaceOnUse"><path d="M 18 120 L 18 66 Q 18 32 48 14 Q 78 32 78 66 L 78 120" fill="none" stroke="#2D2C57" stroke-width="3"/></pattern></defs><rect width="100%" height="100%" fill="url(#arches)"/></svg>
+    <div class="glow"></div>
+    <div class="wrap inner">
+      <svg class="mark" viewBox="0 0 200 240" role="img" aria-label="شعار وَمْض آرك: بوابة وفي داخلها مؤشر يومض"><path d="M 30 240 L 30 130 Q 30 66 100 30 Q 170 66 170 130 L 170 240" fill="none" stroke="#F4ECE1" stroke-width="30" stroke-linejoin="miter" stroke-miterlimit="10"/><rect class="cursor" x="88" y="150" width="24" height="76" rx="3" fill="#E8B04B"/></svg>
+      <h1 class="wordmark">wamd<span>arc</span></h1>
+      <img class="ar-name" src="assets/wamdarc-ar.png" alt="وَمْض آرك" width="1607" height="469">
+      <p class="tagline">لكل فكرة بوابة</p>
+      <p class="tagline-en">EVERY IDEA HAS A GATEWAY</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">تواصل معنا</a>
+        <a class="btn btn-ghost" href="#services">خدماتنا</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <p class="eyebrow">ABOUT</p>
+        <h2>من نحن</h2>
+        <p class="lead">وَمْض آرك علامة تقنية سعودية تبني تطبيقات ومنصات ذكية تجعل الحياة اليومية أبسط وأسرع. نؤمن أن كل فكرة عظيمة تبدأ بومضة، وتحتاج بوابة تعبر منها إلى الواقع.</p>
+      </div>
+      <div class="quote">
+        <p>من الومضة الأولى إلى منتج يستخدمه الناس كل يوم</p>
+        <small>FROM SPARK TO PRODUCT</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <p class="eyebrow">SERVICES</p>
+      <h2>خدماتنا</h2>
+      <p class="lead">نحوّل الأفكار إلى أدوات رقمية بسيطة وواضحة.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <h3>تطبيقات الويب والجوال</h3>
+          <p>تطبيقات سريعة تشتغل على كل الأجهزة.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>لوحات البيانات</h3>
+          <p>داشبورد تعرض أرقامك بوضوح وتساعدك تقرر.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></div>
+          <h3>المتاجر الإلكترونية</h3>
+          <p>متاجر أنيقة تبيع منتجاتك بسهولة.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>الأتمتة والأدوات الذكية</h3>
+          <p>نوفّر وقتك بأتمتة المهام المتكررة.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <div class="wrap">
+      <p class="eyebrow">PRODUCTS</p>
+      <h2>منتجاتنا</h2>
+      <p class="lead">منتجات صغيرة تحل مشاكل حقيقية، وكلها تحت مظلة واحدة.</p>
+      <div class="plist">
+        <a class="product" href="#">
+          <h3>سهم</h3>
+          <p>بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى بدون إنترنت.</p>
+          <span class="url">sahm.wamdarc.com</span>
+        </a>
+        <a class="product soon" href="#">
+          <h3>المصاريف</h3>
+          <p>تتبّع مصاريفك اليومية بلمسة من جوالك.</p>
+          <span class="url">قريبًا</span>
+        </a>
+        <a class="product soon" href="#">
+          <h3>متتبع الأسعار</h3>
+          <p>قارن أسعار مشترياتك وتابع تغيّرها.</p>
+          <span class="url">قريبًا</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <p class="eyebrow">CONTACT</p>
+          <h2>تواصل معنا</h2>
+          <p class="lead">عندك فكرة تبي لها بوابة؟ راسلنا ونرد عليك في أقرب وقت.</p>
+          <div class="cta" style="justify-content:flex-start">
+            <a class="btn btn-primary" href="mailto:hello@wamdarc.com">أرسل لنا إيميل</a>
+          </div>
+        </div>
+        <div class="links">
+          <a href="mailto:hello@wamdarc.com"><span class="lbl">الإيميل</span><span class="val">hello@wamdarc.com</span></a>
+          <a href="https://x.com/wamdarc" target="_blank" rel="noopener"><span class="lbl">إكس</span><span class="val">@wamdarc</span></a>
+          <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener"><span class="lbl">إنستقرام</span><span class="val">@wamdarc</span></a>
+          <a href="https://www.tiktok.com/@wamdarc" target="_blank" rel="noopener"><span class="lbl">تيك توك</span><span class="val">@wamdarc</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>© <span id="y">2026</span> وَمْض آرك. جميع الحقوق محفوظة.</span>
+    <span class="en">wamdarc.com</span>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
