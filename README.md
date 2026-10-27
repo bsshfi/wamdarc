@@ -1,9 +1,9 @@
-# wamdarc.com — النسخة الثالثة (عربي + إنجليزي، نموذج تواصل، وبطاقتا سهم وفلق)
+# wamdarc.com — النسخة الثالثة (عربي + إنجليزي، نموذج تواصل، وبطاقات سهم وفلق وخُطى)
 
 ## طريقة التحديث على GitHub
 ارفع **محتويات** هذا المجلد على نفس المستودع واستبدل الموجود:
 - `index.html` و`thanks.html` (صفحة الشكر بعد الإرسال — جديدة)
-- مجلد `assets/` كامل (فيه مجلدين `assets/sahm/` و`assets/falaq/` للأيقونات والصور)
+- مجلد `assets/` كامل (فيه `assets/sahm/` و`assets/falaq/` و`assets/khuta/` للأيقونات والصور)
 - `CNAME` (لا تحذفه)
 
 ## تفعيل نموذج التواصل (مرة وحدة فقط)
@@ -26,8 +26,9 @@
 زر EN / عربي في الأعلى، والموقع يتذكر اختيار الزائر.
 روابط مباشرة: wamdarc.com/?lang=en و wamdarc.com/?lang=ar
 
-## بطاقتا سهم وفلق
+## بطاقات التطبيقات
 في قسم «منتجاتنا» كل بطاقة رابط كامل يفتح التطبيق في تبويب جديد:
 - سهم: https://sahm.wamdarc.com — الصور في `assets/sahm/` (main / list / qibla .webp)
-- فلق: https://falaq.wamdarc.com — الصور في `assets/falaq/` (prayer / qibla / moon .webp)
+- فلق: https://falaq.wamdarc.com — الصور في `assets/falaq/` (prayer / azkar / moon .webp)
+- خُطى: https://khuta.wamdarc.com — الصور في `assets/khuta/` (map / trips / passport .webp)
 لتغيير أي صورة استبدلها بنفس الاسم.
