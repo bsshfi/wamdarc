@@ -1,398 +1,158 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-page="home" data-title="title_home" data-desc="desc_home">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>وَمْض آرك | WAMD ARC</title>
-<meta name="description" content="وَمْض آرك علامة تقنية سعودية تبني حلولًا ذكية وتطبيقات ومنصات رقمية. WAMD ARC — Spark. Path. Future.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>وَمْض آرك | WAMD ARC — الشرارة. المسار. المستقبل.</title>
+<meta name="description" content="وَمْض آرك علامة تقنية سعودية تطوّر تطبيقات بسيطة تعمل بدون اتصال وتحترم خصوصيتك: سهم، فلق، خُطى.">
 <meta name="theme-color" content="#111317">
+<link rel="canonical" href="https://wamdarc.com/">
 <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="WAMD ARC | وَمْض آرك">
 <meta property="og:url" content="https://wamdarc.com/">
-<meta property="og:title" content="وَمْض آرك | WAMD ARC">
-<meta property="og:description" content="الشرارة. المسار. المستقبل. — Spark. Path. Future.">
-<meta property="og:image" content="https://wamdarc.com/assets/og-image.png?v=2">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:title" content="وَمْض آرك | WAMD ARC — الشرارة. المسار. المستقبل.">
+<meta property="og:description" content="وَمْض آرك علامة تقنية سعودية تطوّر تطبيقات بسيطة تعمل بدون اتصال وتحترم خصوصيتك: سهم، فلق، خُطى.">
+<meta property="og:image" content="https://wamdarc.com/assets/og-image.png?v=4">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="ar_SA"><meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@wamdarc">
-<link rel="alternate" hreflang="ar" href="https://wamdarc.com/?lang=ar">
+<link rel="alternate" hreflang="ar" href="https://wamdarc.com/">
 <link rel="alternate" hreflang="en" href="https://wamdarc.com/?lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#111317; --ink2:#0D0F12; --card:#171A1F; --line:#262A31;
-    --white:#F3F3F1; --grey:#8A8F98; --soft:#B9BEC6; --orange:#FF5A1F; --paper:#ECECEA;
-    --ar:'IBM Plex Sans Arabic', Tahoma, sans-serif;
-    --en:'Montserrat', Arial, sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--ar);background:var(--ink);color:var(--white);line-height:1.8;-webkit-font-smoothing:antialiased}
-  html[lang=en] body{font-family:var(--en);line-height:1.7}
-  a{color:inherit}
-  .wrap{width:min(1140px, 100% - 32px);margin-inline:auto}
-  .ltr{direction:ltr;unicode-bidi:isolate}
-
-  header{position:sticky;top:0;z-index:10;background:rgba(17,19,23,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
-  .brand img{height:26px;display:block}
-  .nav-right{display:flex;align-items:center;gap:28px}
-  .nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
-  .nav ul a{text-decoration:none;color:var(--grey);transition:color .2s}
-  .nav ul a:hover{color:var(--white)}
-  .lang{font:inherit;font-size:14px;background:none;color:var(--white);border:1px solid #3A3F48;border-radius:999px;padding:6px 16px;cursor:pointer;transition:border-color .2s}
-  .lang:hover{border-color:var(--orange)}
-  html[lang=ar] .lang{font-family:var(--en)}
-  html[lang=en] .lang{font-family:var(--ar)}
-
-  .hero{position:relative;overflow:hidden;min-height:calc(100svh - 70px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 0 140px;
-    background:radial-gradient(ellipse 70% 55% at 50% 40%, #1B1E25 0%, var(--ink) 70%)}
-  .hero .deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-  .hero .horizon{position:absolute;left:-10%;right:-10%;bottom:-62vw;height:70vw;border-radius:50%;background:var(--ink2);
-    box-shadow:0 -1px 0 rgba(243,243,241,.35), 0 -30px 90px rgba(255,140,80,.10)}
-  .hero .inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px}
-  .hero-logo{width:min(620px, 84vw);height:auto;overflow:visible}
-  .hero-logo .arc{animation:arcIn 1.4s cubic-bezier(.2,.7,.2,1) both}
-  .hero-logo .spark{transform-box:fill-box;transform-origin:center;animation:sparkIn .6s 1.1s cubic-bezier(.3,1.6,.5,1) both, twinkle 4s 2.2s ease-in-out infinite}
-  @keyframes arcIn{from{opacity:0;transform:translate(-14px,14px)}to{opacity:1;transform:none}}
-  @keyframes sparkIn{from{opacity:0;transform:scale(.2) rotate(-45deg)}to{opacity:1;transform:scale(1)}}
-  @keyframes twinkle{0%,100%{transform:scale(1)}50%{transform:scale(1.18) rotate(45deg)}}
-  @media (prefers-reduced-motion:reduce){.hero-logo .arc,.hero-logo .spark{animation:none}}
-  .tag{font-size:clamp(24px, 4vw, 38px);font-weight:500;margin-top:10px}
-  .tag2{font-weight:300;letter-spacing:.06em;color:var(--grey);font-size:clamp(15px,1.8vw,18px)}
-  html[lang=ar] .tag2{font-family:var(--en)}
-  html[lang=en] .tag2{font-family:var(--ar)}
-  .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}
-  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 28px;border-radius:999px;font:inherit;font-weight:500;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s, background .2s, border-color .2s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-primary{background:var(--orange);color:#fff}
-  .btn-ghost{border:1px solid #3A3F48;color:var(--white)}
-  .btn-ghost:hover{border-color:var(--grey)}
-
-  section{padding:110px 0;border-top:1px solid var(--line)}
-  .eyebrow{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-size:13px;letter-spacing:.32em;color:var(--orange);margin-bottom:10px}
-  h2{font-size:clamp(30px, 4.6vw, 46px);font-weight:700;line-height:1.35;margin-bottom:6px}
-  .h2sub{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:300;color:var(--grey);font-size:18px;margin-bottom:18px}
-  html[lang=en] .h2sub, html[lang=en] .sub{display:none}
-  .lead{font-size:18px;font-weight:300;color:var(--soft);max-width:720px}
-
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
-  .pillars div{border-top:2px solid #3A3F48;padding-top:16px}
-  .pillars div:first-child{border-top-color:var(--orange)}
-  .pillars h3{font-size:22px;font-weight:700}
-  .pillars p{color:var(--grey);font-size:15px}
-
-  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 26px;transition:transform .25s, border-color .25s}
-  .card:hover{transform:translateY(-4px);border-color:#3A3F48}
-  .card svg{width:34px;height:34px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:18px}
-  .card h3{font-size:20px;font-weight:700;line-height:1.5}
-  .card .sub{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-size:13px;color:var(--grey);margin-bottom:8px}
-  .card p{font-size:15px;color:var(--soft)}
-
-  .plist{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:44px}
-  .product.feat{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:40px;padding:44px 48px 0;overflow:hidden;position:relative;text-decoration:none;color:inherit;
-    background:radial-gradient(ellipse 60% 80% at 20% 100%, rgba(255,90,31,.10), transparent 70%), var(--card);transition:border-color .25s}
-  .feat:hover{border-color:#3A3F48}
-  .product.feat.rev{grid-template-columns:1.1fr 1fr;background:radial-gradient(ellipse 60% 80% at 80% 100%, rgba(240,194,106,.10), transparent 70%), var(--card)}
-  .feat.rev .phones{order:-1}
-  .product.feat.khuta{background:radial-gradient(ellipse 60% 80% at 20% 100%, rgba(62,143,196,.14), transparent 70%), var(--card)}
-  .feat .txt{display:flex;flex-direction:column;gap:10px;padding-bottom:44px}
-  .feat .head{display:flex;align-items:center;gap:16px}
-  .feat .appicon{width:76px;height:76px;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-  .feat h3{font-size:32px;line-height:1.2}
-  .feat .url{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-size:14px;color:var(--grey)}
-  .feat .head .badge{margin:0;padding:4px 12px;border:1px solid rgba(255,90,31,.45);border-radius:999px;font-family:var(--en);font-size:11px;align-self:center}
-  .feat p{font-size:17px}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:8px 0 14px}
-  .chips li{font-size:14px;color:var(--soft);border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:999px;padding:6px 14px}
-  .feat .btn{align-self:flex-start}
-  .feat .btn span{display:inline-block;margin-inline-start:8px;transition:transform .2s}
-  html[lang=ar] .feat .btn span{transform:scaleX(-1)}
-  .feat:hover .btn{transform:translateY(-2px)}
-  .phones{position:relative;height:430px;display:flex;justify-content:center;align-items:flex-end}
-  .phone{position:absolute;bottom:-60px;width:210px;border-radius:30px;border:6px solid #050608;box-shadow:0 20px 50px rgba(0,0,0,.55);background:#050608;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
-  .phone img{display:block;width:100%;height:auto;border-radius:24px}
-  .phone.m{z-index:2;width:230px;bottom:-40px}
-  .phone.l{transform:translateX(-150px) rotate(-7deg) scale(.9)}
-  .phone.r{transform:translateX(150px) rotate(7deg) scale(.9)}
-  .feat:hover .phone.l{transform:translateX(-165px) rotate(-9deg) scale(.9)}
-  .feat:hover .phone.r{transform:translateX(165px) rotate(9deg) scale(.9)}
-  .product{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:6px}
-  .product h3{font-size:22px;font-weight:700}
-  .product p{color:var(--soft);font-size:15px}
-  .badge{align-self:flex-start;margin-top:auto;padding-top:14px;font-size:13px;letter-spacing:.12em;color:var(--orange)}
-  .badge.soon{color:var(--grey)}
-  .values{background:var(--ink2)}
-
-  .contact .box{background:var(--paper);color:var(--ink);border-radius:30px;padding:56px;display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
-  .contact .lead{color:#4A4F57}
-  .contact .h2sub{color:#6B7079}
-  .links{display:flex;flex-direction:column;gap:10px;margin-top:28px}
-  .links a{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:16px 20px;text-decoration:none;transition:transform .2s}
-  .links a:hover{transform:translateY(-2px)}
-  .links .lbl{font-size:15px;color:#6B7079}
-  .links .val{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:500}
-
-  form{background:#fff;border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:16px}
-  form h3{font-size:22px;font-weight:700}
-  label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500;color:#3A3E45}
-  input,textarea{font:inherit;font-size:16px;color:var(--ink);background:#F6F6F4;border:1px solid #DADAD6;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .2s, box-shadow .2s}
-  input:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,90,31,.15)}
-  textarea{min-height:130px;resize:vertical}
-  input[type=email]{direction:ltr}
-  html[lang=ar] input[type=email]{text-align:right}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .hp{position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;border:0 !important;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;opacity:0}
-  form{position:relative}
-  .q input{direction:ltr;max-width:280px}
-  .err{color:#C2410C;font-size:14px} .err:empty{display:none}
-  .note{font-size:13px;color:#6B7079}
-  form .btn{align-self:flex-start;padding:12px 36px}
-
-  footer{padding:36px 0;color:var(--grey);font-size:14px;border-top:1px solid var(--line)}
-  footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-  footer img{height:22px;opacity:.85}
-
-  @media (max-width:960px){
-    .grid{grid-template-columns:repeat(2,1fr)}
-    .plist{grid-template-columns:1fr}
-    .product.feat{grid-template-columns:1fr;padding:32px 26px 0;gap:10px}
-    .feat .txt{padding-bottom:10px}
-    .product.feat.rev{grid-template-columns:1fr} .feat.rev .phones{order:0}
-    .contact .box{grid-template-columns:1fr}
-    .nav ul{display:none}
-  }
-  @media (max-width:560px){
-    .grid,.pillars,.row2{grid-template-columns:1fr}
-    section{padding:80px 0}
-    .contact .box{padding:24px 16px}
-    form{padding:22px 18px}
-    .product.feat{padding:26px 20px 0}
-    .feat h3{font-size:26px} .feat .appicon{width:62px;height:62px;border-radius:15px}
-    .phones{height:300px}
-    .phone{width:140px;border-radius:22px;border-width:4px;bottom:-50px} .phone img{border-radius:18px}
-    .phone.m{width:158px;bottom:-34px}
-    .phone.l{transform:translateX(-96px) rotate(-7deg) scale(.9)} .phone.r{transform:translateX(96px) rotate(7deg) scale(.9)}
-    .feat:hover .phone.l{transform:translateX(-96px) rotate(-7deg) scale(.9)} .feat:hover .phone.r{transform:translateX(96px) rotate(7deg) scale(.9)}
-  }
-</style>
+<link rel="stylesheet" href="assets/site.css?v=4">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang'),l=q||localStorage.getItem('lang');if(l==='en'){var d=document.documentElement;d.lang='en';d.dir='ltr';}}catch(e){}})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "WAMD ARC", "alternateName": "وَمْض آرك", "url": "https://wamdarc.com/", "logo": "https://wamdarc.com/assets/apple-touch-icon.png", "email": "contact@wamdarc.com", "sameAs": ["https://x.com/wamdarc", "https://instagram.com/wamdarc", "https://www.tiktok.com/@wamd.arc"]}</script>
 </head>
 <body>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="WAMD ARC"><img src="assets/logo-horizontal-on-dark.svg" alt="WAMD ARC"></a>
-    <div class="nav-right">
-      <ul>
-        <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
-        <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
-        <li><a href="#products" data-i18n="nav_products">منتجاتنا</a></li>
-        <li><a href="#values" data-i18n="nav_values">قيمنا</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
-      </ul>
-      <button class="lang" id="langBtn" type="button" data-i18n="lang_btn" aria-label="Switch language">EN</button>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="WAMD ARC"><img src="assets/logo-horizontal-on-light.svg" alt="WAMD ARC" width="190" height="24"></a>
+  <div class="nav-r"><ul><li><a href="#apps"><span data-i18n="nav_apps">تطبيقاتنا</span></a></li><li><a href="#promise"><span data-i18n="nav_promise">وعدنا</span></a></li><li><a href="#install"><span data-i18n="nav_install">طريقة التثبيت</span></a></li><li><a href="#about"><span data-i18n="nav_about">من نحن</span></a></li><li><a href="#contact"><span data-i18n="nav_contact">تواصل معنا</span></a></li></ul><button class="lang" id="langBtn" type="button" data-i18n="lang_btn">EN</button></div>
+</div></header>
+<main>
+<div class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="txt">
+      <span class="kicker"><i></i><span class="ltr">WAMD ARC</span> · وَمْض آرك</span>
+      <h1><span data-i18n="h1_a">الشرارة</span><b>.</b> <span data-i18n="h1_b">المسار</span><b>.</b><br><span data-i18n="h1_c">المستقبل</span><b>.</b></h1>
+      <p class="lead"><span data-i18n="hero_lead">وَمْض آرك علامة تقنية سعودية تطوّر تطبيقات وحلولًا رقمية تقوم على البساطة والخصوصية وجودة التنفيذ.</span></p>
+      <div class="cta"><a class="btn btn-primary" href="#apps"><span data-i18n="cta_apps">استعرض تطبيقاتنا</span></a><a class="btn btn-ghost" href="#contact"><span data-i18n="cta_contact">تواصل معنا</span></a></div>
+      <div class="trio"><a href="sahm/" aria-label="Sahm"><img src="assets/sahm/icon.webp" alt="" width="46" height="46"></a><a href="falaq/" aria-label="Falaq"><img src="assets/falaq/icon.webp" alt="" width="46" height="46"></a><a href="khuta/" aria-label="Khuta"><img src="assets/khuta/icon.webp" alt="" width="46" height="46"></a><small><span data-i18n="trio">سهم · فلق · خُطى</span></small></div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="ph p3"><img src="assets/falaq/prayer.webp" alt="" width="600" height="1298"></div>
+      <div class="ph p2"><img src="assets/khuta/map.webp" alt="" width="600" height="1298"></div>
+      <div class="ph p1"><img src="assets/sahm/main.webp" alt="" width="600" height="1298"></div>
     </div>
   </div>
-</header>
+</div>
 
-<main id="top">
-  <div class="hero">
-    <svg class="deco" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true"><path d="M -80 980 Q 420 120 1520 60" fill="none" stroke="#F3F3F1" stroke-opacity=".05" stroke-width="2"/><path d="M -80 1080 Q 480 260 1520 200" fill="none" stroke="#F3F3F1" stroke-opacity=".03" stroke-width="2"/></svg>
-    <div class="horizon" aria-hidden="true"></div>
-    <div class="wrap inner">
-      <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">وَمْض آرك — WAMD ARC</h1>
-      <svg class="hero-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-40.0 -275.3 735.5 317.3" role="img" aria-label="WAMD ARC"><defs><linearGradient id="ga" x1="0" y1="0" x2="352" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F3F3F1" stop-opacity="0.0"/><stop offset="0.5" stop-color="#F3F3F1" stop-opacity="0.75"/><stop offset="1" stop-color="#F3F3F1" stop-opacity="1"/></linearGradient></defs><g transform="translate(140.93 -235.35) scale(0.8019)"><path class="arc" d="M 4 178 Q 104 33 362 25.6 L 362 29.4 Q 107 39 4 178 Z" fill="url(#ga)"/><path class="spark" d="M 380 -2.5 Q 385.6 21.9 410 27.5 Q 385.6 33.1 380 57.5 Q 374.4 33.1 350 27.5 Q 374.4 21.9 380 -2.5 Z" fill="#FF5A1F"/></g><path d="M26.6 0.0 3.2 -70.0H13.5L35.0 -5.4H29.8L52.1 -70.0H61.300000000000004L83.10000000000001 -5.4H78.10000000000001L99.9 -70.0H109.4L86.0 0.0H75.5L55.1 -59.900000000000006H57.800000000000004L37.300000000000004 0.0Z M121.00000000000001 0.0 152.70000000000002 -70.0H162.60000000000002L194.4 0.0H183.9L155.60000000000002 -64.4H159.60000000000002L131.3 0.0ZM134.5 -17.5 137.20000000000002 -25.5H176.60000000000002L179.5 -17.5Z M213.3 0.0V-70.0H221.5L252.9 -17.1H248.5L279.5 -70.0H287.70000000000005L287.8 0.0H278.20000000000005L278.1 -54.900000000000006H280.40000000000003L252.8 -8.5H248.20000000000002L220.4 -54.900000000000006H222.9V0.0Z M317.3 0.0V-70.0H346.8Q358.0 -70.0 366.55 -65.6Q375.1 -61.2 379.85 -53.300000000000004Q384.6 -45.400000000000006 384.6 -35.0Q384.6 -24.6 379.85 -16.700000000000003Q375.1 -8.8 366.55 -4.4Q358.0 0.0 346.8 0.0ZM327.3 -8.700000000000001H346.20000000000005Q354.90000000000003 -8.700000000000001 361.25 -12.0Q367.6 -15.3 371.1 -21.25Q374.6 -27.200000000000003 374.6 -35.0Q374.6 -42.900000000000006 371.1 -48.800000000000004Q367.6 -54.7 361.25 -58.0Q354.90000000000003 -61.300000000000004 346.20000000000005 -61.300000000000004H327.3Z" fill="#F3F3F1"/><path d="M425.90000000000003 0.0 458.1 -70.0H463.20000000000005L495.40000000000003 0.0H489.90000000000003L459.50000000000006 -66.8H461.70000000000005L431.40000000000003 0.0ZM437.70000000000005 -19.700000000000003 439.40000000000003 -24.0H481.30000000000007L483.00000000000006 -19.700000000000003Z M516.6 0.0V-70.0H541.7Q554.9000000000001 -70.0 562.4000000000001 -63.8Q569.9000000000001 -57.6 569.9000000000001 -46.400000000000006Q569.9000000000001 -39.1 566.5 -33.85Q563.1 -28.6 556.8 -25.75Q550.5 -22.900000000000002 541.7 -22.900000000000002H519.4000000000001L521.7 -25.3V0.0ZM565.2 0.0 547.0 -25.400000000000002H552.8000000000001L571.0 0.0ZM521.7 -25.0 519.4000000000001 -27.400000000000002H541.7Q553.0 -27.400000000000002 558.85 -32.4Q564.7 -37.4 564.7 -46.400000000000006Q564.7 -55.5 558.85 -60.45Q553.0 -65.4 541.7 -65.4H519.4000000000001L521.7 -67.9Z M626.7 0.5Q618.9000000000001 0.5 612.2500000000001 -2.1500000000000004Q605.6000000000001 -4.800000000000001 600.7 -9.600000000000001Q595.8000000000001 -14.4 593.1000000000001 -20.85Q590.4000000000001 -27.3 590.4000000000001 -35.0Q590.4000000000001 -42.7 593.1000000000001 -49.150000000000006Q595.8000000000001 -55.6 600.75 -60.400000000000006Q605.7 -65.2 612.3000000000001 -67.85Q618.9000000000001 -70.5 626.7 -70.5Q634.1000000000001 -70.5 640.5500000000002 -68.1Q647.0000000000001 -65.7 651.6000000000001 -60.800000000000004L648.4000000000001 -57.5Q643.9000000000001 -61.900000000000006 638.45 -63.85Q633.0000000000001 -65.8 626.9000000000001 -65.8Q620.2 -65.8 614.45 -63.5Q608.7 -61.2 604.45 -57.0Q600.2 -52.800000000000004 597.8500000000001 -47.2Q595.5000000000001 -41.6 595.5000000000001 -35.0Q595.5000000000001 -28.400000000000002 597.8500000000001 -22.8Q600.2 -17.2 604.45 -13.0Q608.7 -8.8 614.45 -6.5Q620.2 -4.2 626.9000000000001 -4.2Q633.0000000000001 -4.2 638.45 -6.15Q643.9000000000001 -8.1 648.4000000000001 -12.600000000000001L651.6000000000001 -9.3Q647.0000000000001 -4.4 640.5500000000002 -1.9500000000000002Q634.1000000000001 0.5 626.7 0.5Z" fill="#F3F3F1"/></svg>
-      <p class="tag" data-i18n="tag">الشرارة. المسار. المستقبل.</p>
-      <p class="tag2" dir="auto" data-i18n="tag2">Spark. Path. Future.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact" data-i18n="cta_contact">تواصل معنا</a>
-        <a class="btn btn-ghost" href="#services" data-i18n="cta_services">خدماتنا</a>
+<section id="apps"><div class="wrap">
+  <div class="sec-head rv"><div><span class="eyebrow">OUR APPS</span><h2><span data-i18n="apps_title">تطبيقاتنا</span></h2><p class="sub"><span data-i18n="apps_sub">كل تطبيق يُضاف إلى شاشتك الرئيسية بضغطة، ويعمل حتى بدون اتصال.</span></p></div></div>
+  <div class="apps">
+    <article class="app rv" style="--g:255,90,31">
+      <a class="shot" href="sahm/" tabindex="-1" aria-hidden="true"><div class="ph"><img src="assets/sahm/main.webp" alt="" loading="lazy" width="600" height="1298"></div></a>
+      <div class="body">
+        <div class="t"><img src="assets/sahm/icon.webp" alt="" width="52" height="52"><div><h3><span data-i18n="sahm_name">سهم</span></h3><div class="url ltr">sahm.wamdarc.com</div></div></div>
+        <p><span data-i18n="sahm_short">بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى في البر بدون شبكة.</span></p>
+        <div class="row"><a class="btn btn-primary btn-sm" href="https://sahm.wamdarc.com" target="_blank" rel="noopener"><span data-i18n="sahm_open">افتح سهم</span></a><a class="btn btn-ghost btn-sm" href="sahm/"><span data-i18n="details">التفاصيل</span></a></div>
       </div>
+    </article>
+    <article class="app rv" style="--g:240,194,106">
+      <a class="shot" href="falaq/" tabindex="-1" aria-hidden="true"><div class="ph"><img src="assets/falaq/prayer.webp" alt="" loading="lazy" width="600" height="1298"></div></a>
+      <div class="body">
+        <div class="t"><img src="assets/falaq/icon.webp" alt="" width="52" height="52"><div><h3><span data-i18n="falaq_name">فلق</span></h3><div class="url ltr">falaq.wamdarc.com</div></div></div>
+        <p><span data-i18n="falaq_short">مواقيت الصلاة وتنبيهاتها، القبلة، الأذكار، والقمر ومنازله.</span></p>
+        <div class="row"><a class="btn btn-primary btn-sm" href="https://falaq.wamdarc.com" target="_blank" rel="noopener"><span data-i18n="falaq_open">افتح فلق</span></a><a class="btn btn-ghost btn-sm" href="falaq/"><span data-i18n="details">التفاصيل</span></a></div>
+      </div>
+    </article>
+    <article class="app rv" style="--g:62,143,196">
+      <a class="shot" href="khuta/" tabindex="-1" aria-hidden="true"><div class="ph"><img src="assets/khuta/map.webp" alt="" loading="lazy" width="600" height="1298"></div></a>
+      <div class="body">
+        <div class="t"><img src="assets/khuta/icon.webp" alt="" width="52" height="52"><div><h3><span data-i18n="khuta_name">خُطى</span></h3><div class="url ltr">khuta.wamdarc.com</div></div></div>
+        <p><span data-i18n="khuta_short">سجل أسفارك على كرة أرضية، مع يوميات وصور وجواز بأختام الدول.</span></p>
+        <div class="row"><a class="btn btn-primary btn-sm" href="https://khuta.wamdarc.com" target="_blank" rel="noopener"><span data-i18n="khuta_open">افتح خُطى</span></a><a class="btn btn-ghost btn-sm" href="khuta/"><span data-i18n="details">التفاصيل</span></a></div>
+      </div>
+    </article>
+  </div>
+  <div class="qr rv">
+    <div class="code"><img id="qrImg" src="assets/qr/sahm.svg" alt="QR"></div>
+    <div><b><span data-i18n="qr_t">تتصفح من الكمبيوتر؟</span></b><p><span data-i18n="qr_d">امسح الرمز بكاميرا جوالك لفتح التطبيق مباشرة.</span></p></div>
+    <div class="pick"><button type="button" data-qr="sahm" class="on"><span data-i18n="sahm_name">سهم</span></button><button type="button" data-qr="falaq" class=""><span data-i18n="falaq_name">فلق</span></button><button type="button" data-qr="khuta" class=""><span data-i18n="khuta_name">خُطى</span></button></div>
+  </div>
+</div></section>
+
+<section id="promise" class="light"><div class="wrap">
+  <div class="rv"><span class="eyebrow">OUR PROMISE</span><h2><span data-i18n="prom_title">وعدنا في كل تطبيق</span></h2><p class="sub"><span data-i18n="prom_sub">خمسة مبادئ نلتزم بها في كل ما نطلقه.</span></p></div>
+  <div class="prom"><div class="rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><h3><span data-i18n="pr1_t">خصوصيتك أولًا</span></h3><p><span data-i18n="pr1_d">بياناتك تُحفظ على جوالك، ولا نبيعها أو نشاركها.</span></p></div><div class="rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><path d="M3 3l18 18"/></svg></span><h3><span data-i18n="pr2_t">يعمل بدون اتصال</span></h3><p><span data-i18n="pr2_d">في البر والطائرة وأينما ضعفت الشبكة.</span></p></div><div class="rv"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 5l18 14"/></svg></span><h3><span data-i18n="pr3_t">بدون إعلانات</span></h3><p><span data-i18n="pr3_d">واجهة نظيفة تركّز على ما يهمك.</span></p></div><div class="rv"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M3 3l18 18"/></svg></span><h3><span data-i18n="pr4_t">بدون تسجيل</span></h3><p><span data-i18n="pr4_d">لا حساب ولا كلمة مرور، افتح وابدأ.</span></p></div><div class="rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3><span data-i18n="pr5_t">خفيف ومجاني</span></h3><p><span data-i18n="pr5_d">يفتح فورًا ولا يثقل جوالك.</span></p></div></div>
+  <p class="prom-note rv"><span data-i18n="prom_note">التفاصيل الكاملة في</span> <a href="privacy/"><span data-i18n="privacy">سياسة الخصوصية</span></a></p>
+</div></section>
+
+<section id="install"><div class="wrap">
+  <div class="rv"><span class="eyebrow">INSTALL</span><h2><span data-i18n="inst_title">أضفه لشاشتك في ثلاث خطوات</span></h2><p class="sub"><span data-i18n="inst_sub">تطبيقاتنا تُثبَّت من المتصفح مباشرة، بدون متجر وبدون تحميل كبير.</span></p></div>
+  <div class="inst rv">
+    <div class="os"><h3><svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.4-1-2.4-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg><span data-i18n="ios">آيفون</span><span class="ltr">Safari</span></h3><ol>
+      <li><span data-i18n="ios1" data-html="1">افتح رابط التطبيق في <b>Safari</b></span></li><li><span data-i18n="ios2" data-html="1">اضغط زر المشاركة <span class="k"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg></span> أسفل الشاشة</span></li><li><span data-i18n="ios3" data-html="1">اختر <b>«إضافة إلى الشاشة الرئيسية»</b></span></li></ol></div>
+    <div class="os"><h3><svg viewBox="0 0 24 24"><path d="M7 9h10a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2h-1v3h-2v-3h-2v3H9v-3H8a2 2 0 0 1-2-2v-7a1 1 0 0 1 1-1zm-3 1a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0v-5zm14 0a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0v-5zM7.2 8a4.8 4.8 0 0 1 2.6-3.9l-1-1.6.6-.4 1.1 1.7a5.3 5.3 0 0 1 3 0l1.1-1.7.6.4-1 1.6A4.8 4.8 0 0 1 16.8 8H7.2zm2.8-2a.6.6 0 1 0 0 1.2.6.6 0 0 0 0-1.2zm4 0a.6.6 0 1 0 0 1.2.6.6 0 0 0 0-1.2z"/></svg><span data-i18n="android">أندرويد</span><span class="ltr">Chrome</span></h3><ol>
+      <li><span data-i18n="and1" data-html="1">افتح رابط التطبيق في <b>Chrome</b></span></li><li><span data-i18n="and2" data-html="1">اضغط القائمة <span class="k"><svg viewBox="0 0 24 24" style="stroke:var(--white)"><circle cx="12" cy="5" r=".8"/><circle cx="12" cy="12" r=".8"/><circle cx="12" cy="19" r=".8"/></svg></span> أعلى الشاشة</span></li><li><span data-i18n="and3" data-html="1">اختر <b>«تثبيت التطبيق»</b></span></li></ol></div>
+  </div>
+  <p class="inst-note rv"><span data-i18n="inst_note">بعد الإضافة يفتح التطبيق بملء الشاشة مثل أي تطبيق آخر، ويتحدّث تلقائيًا.</span></p>
+</div></section>
+
+<section id="about" class="about"><div class="wrap">
+  <div class="rv"><span class="eyebrow">ABOUT</span><h2><span data-i18n="about_title">من نحن</span></h2></div>
+  <div class="rv">
+    <p><span data-i18n="about_p1">وَمْض آرك علامة تقنية سعودية من الرياض. نؤمن أن أفضل التقنية هي التي تختفي خلف التجربة: تطبيق يفتح بسرعة، يؤدي مهمته بإتقان، ويحترم خصوصية من يستخدمه.</span></p>
+    <p><span data-i18n="about_p2">اسمنا يجمع الوَمْضة — شرارة الفكرة — والقوس الذي يرسم مسارها نحو المستقبل.</span></p>
+    <div class="biz"><span><span data-i18n="biz_t">لديك فكرة تطبيق أو أداة لجهتك؟</span></span><a href="#contact"><span data-i18n="biz_a">تحدّث معنا</span> <span class="arr">→</span></a></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap"><div class="box rv">
+  <div>
+    <span class="eyebrow">CONTACT</span>
+    <h2><span data-i18n="contact_title">تواصل معنا</span></h2>
+    <p class="lead2"><span data-i18n="contact_lead">اقتراح، ملاحظة على أحد التطبيقات، أو فكرة جديدة — نقرأ كل رسالة.</span></p>
+    <div class="links">
+      <a href="mailto:contact@wamdarc.com"><span class="l"><span data-i18n="email_lbl">البريد</span></span><span class="v">contact@wamdarc.com</span></a>
+      <a href="https://x.com/wamdarc" target="_blank" rel="noopener"><span class="l"><span data-i18n="x_lbl">إكس</span></span><span class="v">@wamdarc</span></a>
+      <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener"><span class="l"><span data-i18n="ig_lbl">إنستقرام</span></span><span class="v">@wamdarc</span></a>
     </div>
   </div>
-
-  <section id="about">
-    <div class="wrap">
-      <p class="eyebrow">WHO WE ARE</p>
-      <h2 data-i18n="about_title">من نحن؟</h2>
-      <p class="lead" data-i18n="about_text">وَمْض آرك علامة تقنية سعودية طموحة، تبني حلولًا ذكية وتقنيات متقدمة تسهم في تشكيل مستقبل أكثر اتصالًا وذكاءً. نؤمن أن الابتكار يبدأ بشرارة، ثم يأخذ مساره إلى واقع ملموس.</p>
-      <div class="pillars">
-        <div><h3 data-i18n="p1_t">الشرارة</h3><p data-i18n="p1_d">كل منتج يبدأ بفكرة جريئة</p></div>
-        <div><h3 data-i18n="p2_t">المسار</h3><p data-i18n="p2_d">خطوات واضحة من الفكرة إلى الإطلاق</p></div>
-        <div><h3 data-i18n="p3_t">المستقبل</h3><p data-i18n="p3_d">منتجات تكبر وتستمر مع الناس</p></div>
-      </div>
+  <form id="contactForm" action="https://formsubmit.co/contact@wamdarc.com" method="POST" novalidate>
+    <h3><span data-i18n="form_title">أرسل رسالة</span></h3>
+    <input type="hidden" name="_subject" id="fSubject" value="رسالة جديدة من wamdarc.com">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_next" id="fNext" value="https://wamdarc.com/thanks.html">
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <fieldset class="topics"><legend><span data-i18n="topic">بخصوص</span></legend><label><input type="radio" name="topic" value="Sahm"><span class="pill"><img src="assets/sahm/icon.webp" alt=""><span data-i18n="sahm_name">سهم</span></span></label><label><input type="radio" name="topic" value="Falaq"><span class="pill"><img src="assets/falaq/icon.webp" alt=""><span data-i18n="falaq_name">فلق</span></span></label><label><input type="radio" name="topic" value="Khuta"><span class="pill"><img src="assets/khuta/icon.webp" alt=""><span data-i18n="khuta_name">خُطى</span></span></label><label><input type="radio" name="topic" value="General" checked><span class="pill"><span data-i18n="t_general">عام</span></span></label></fieldset>
+    <div class="row2">
+      <label><span data-i18n="f_name">الاسم</span><input type="text" name="name" required maxlength="80" data-ph="ph_name" placeholder="اسمك"></label>
+      <label><span data-i18n="f_email">البريد الإلكتروني</span><input type="email" name="email" required maxlength="120" data-ph="ph_email" placeholder="name@example.com"></label>
     </div>
-  </section>
-
-  <section id="services">
-    <div class="wrap">
-      <p class="eyebrow">SERVICES</p>
-      <h2 data-i18n="services_title">خدماتنا</h2>
-      <p class="h2sub" data-i18n="services_sub">What we build</p>
-      <div class="grid"><article class="card"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3 data-i18n="s1_t">تطبيقات الويب والجوال</h3><p class="sub" data-i18n="s1_s">Web & Mobile Apps</p><p data-i18n="s1_d">تطبيقات سريعة وبسيطة تشتغل على كل الأجهزة.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><h3 data-i18n="s2_t">لوحات البيانات</h3><p class="sub" data-i18n="s2_s">Dashboards</p><p data-i18n="s2_d">أرقامك واضحة في مكان واحد تساعدك تقرر.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><h3 data-i18n="s3_t">المتاجر الإلكترونية</h3><p class="sub" data-i18n="s3_s">E-commerce</p><p data-i18n="s3_d">متاجر أنيقة تبيع منتجاتك بسهولة.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3 data-i18n="s4_t">الأتمتة والذكاء الاصطناعي</h3><p class="sub" data-i18n="s4_s">Automation & AI</p><p data-i18n="s4_d">نوفّر وقتك بأتمتة المهام وأدوات ذكية.</p></article></div>
-    </div>
-  </section>
-
-  <section id="products">
-    <div class="wrap">
-      <p class="eyebrow">PRODUCTS</p>
-      <h2 data-i18n="products_title">منتجاتنا</h2>
-      <p class="h2sub" data-i18n="products_sub">Built by WAMD ARC</p>
-      <div class="plist">
-        <a class="product feat" href="https://sahm.wamdarc.com" target="_blank" rel="noopener">
-          <div class="txt">
-            <div class="head">
-              <img class="appicon" src="assets/sahm/icon.webp" alt="" width="76" height="76">
-              <div><h3 data-i18n="pr1_t">سهم</h3><div class="url">sahm.wamdarc.com</div></div>
-              <span class="badge" data-i18n="live">متاح</span>
-            </div>
-            <p data-i18n="pr1_d">بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى بدون إنترنت.</p>
-            <ul class="chips"><li data-i18n="pr1_f1">يعمل بدون إنترنت</li><li data-i18n="pr1_f2">القبلة ومواقيت الصلاة</li><li data-i18n="pr1_f3">احفظ مواقعك المفضلة</li></ul>
-            <span class="btn btn-primary"><b data-i18n="pr1_open" style="font-weight:500">افتح سهم</b><span>↗</span></span>
-          </div>
-          <div class="phones" aria-hidden="true">
-            <div class="phone l"><img src="assets/sahm/list.webp" alt="" loading="lazy" width="600" height="1298"></div>
-            <div class="phone r"><img src="assets/sahm/qibla.webp" alt="" loading="lazy" width="600" height="1298"></div>
-            <div class="phone m"><img src="assets/sahm/main.webp" alt="" loading="lazy" width="600" height="1298"></div>
-          </div>
-        </a>
-        <a class="product feat rev" href="https://falaq.wamdarc.com" target="_blank" rel="noopener">
-          <div class="txt">
-            <div class="head">
-              <img class="appicon" src="assets/falaq/icon.webp" alt="" width="76" height="76">
-              <div><h3 data-i18n="pr4_t">فلق</h3><div class="url">falaq.wamdarc.com</div></div>
-              <span class="badge" data-i18n="live">متاح</span>
-            </div>
-            <p data-i18n="pr4_d">مواقيت الصلاة والقبلة والأذكار والقمر ومنازله في صفحة واحدة، تعمل بدون إنترنت.</p>
-            <ul class="chips"><li data-i18n="pr4_f1">مواقيت الصلاة وتنبيهاتها</li><li data-i18n="pr4_f2">أذكار الصباح والمساء</li><li data-i18n="pr4_f3">أطوار القمر ومنازله</li></ul>
-            <span class="btn btn-primary"><b data-i18n="pr4_open" style="font-weight:500">افتح فلق</b><span>↗</span></span>
-          </div>
-          <div class="phones" aria-hidden="true">
-            <div class="phone l"><img src="assets/falaq/azkar.webp" alt="" loading="lazy" width="600" height="1298"></div>
-            <div class="phone r"><img src="assets/falaq/moon.webp" alt="" loading="lazy" width="600" height="1298"></div>
-            <div class="phone m"><img src="assets/falaq/prayer.webp" alt="" loading="lazy" width="600" height="1298"></div>
-          </div>
-        </a>
-        <a class="product feat khuta" href="https://khuta.wamdarc.com" target="_blank" rel="noopener">
-          <div class="txt">
-            <div class="head">
-              <img class="appicon" src="assets/khuta/icon.webp" alt="" width="76" height="76">
-              <div><h3 data-i18n="pr5_t">خُطى</h3><div class="url">khuta.wamdarc.com</div></div>
-              <span class="badge" data-i18n="live">متاح</span>
-            </div>
-            <p data-i18n="pr5_d">سجل أسفارك على كرة أرضية تدورها بإصبعك، مع صفحة لكل رحلة وجواز بأختام كل دولة زرتها.</p>
-            <ul class="chips"><li data-i18n="pr5_f1">كرة أرضية تفاعلية</li><li data-i18n="pr5_f2">صور ويوميات لكل رحلة</li><li data-i18n="pr5_f3">جواز بأختام الدول</li></ul>
-            <span class="btn btn-primary"><b data-i18n="pr5_open" style="font-weight:500">افتح خُطى</b><span>↗</span></span>
-          </div>
-          <div class="phones" aria-hidden="true">
-            <div class="phone l"><img src="assets/khuta/trips.webp" alt="" loading="lazy" width="600" height="1298"></div>
-            <div class="phone r"><img src="assets/khuta/passport.webp" alt="" loading="lazy" width="600" height="1298"></div>
-            <div class="phone m"><img src="assets/khuta/map.webp" alt="" loading="lazy" width="600" height="1298"></div>
-          </div>
-        </a>
-        <div class="product"><h3 data-i18n="pr2_t">المصاريف</h3><p data-i18n="pr2_d">تتبّع مصاريفك اليومية بلمسة من جوالك.</p><span class="badge soon" data-i18n="soon">قريبًا</span></div>
-        <div class="product"><h3 data-i18n="pr3_t">متتبع الأسعار</h3><p data-i18n="pr3_d">قارن أسعار مشترياتك وتابع تغيّرها.</p><span class="badge soon" data-i18n="soon">قريبًا</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="values" class="values">
-    <div class="wrap">
-      <p class="eyebrow">OUR VALUES</p>
-      <h2 data-i18n="values_title">قيمنا</h2>
-      <p class="h2sub" data-i18n="values_sub">Our values</p>
-      <div class="grid"><article class="card"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg><h3 data-i18n="v1_t">الابتكار</h3><p class="sub" data-i18n="v1_s">Innovation</p><p data-i18n="v1_d">تحويل الأفكار إلى حلول.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg><h3 data-i18n="v2_t">التميّز</h3><p class="sub" data-i18n="v2_s">Excellence</p><p data-i18n="v2_d">الجودة في كل تفصيلة.</p></article><article class="card"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.2 15.8M13.2 7.2l4.6 8.6M7.5 18h9"/></svg><h3 data-i18n="v3_t">التكامل</h3><p class="sub" data-i18n="v3_s">Integration</p><p data-i18n="v3_d">ربط التقنية بالإنسان.</p></article><article class="card"><svg viewBox="0 0 24 24"><path d="M3 21 12 4l9 17H3z"/><path d="M8 21l4-8 4 8"/></svg><h3 data-i18n="v4_t">الاستدامة</h3><p class="sub" data-i18n="v4_s">Sustainability</p><p data-i18n="v4_d">بناء مستقبل أفضل.</p></article></div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <div class="box">
-        <div>
-          <p class="eyebrow">CONTACT</p>
-          <h2 data-i18n="contact_title">تواصل معنا</h2>
-          <p class="h2sub" data-i18n="contact_sub">Let’s build your next spark</p>
-          <p class="lead" data-i18n="contact_lead">عندك فكرة تبي لها مسار؟ راسلنا ونرد عليك في أقرب وقت.</p>
-          <div class="links">
-            <a href="mailto:contact@wamdarc.com"><span class="lbl" data-i18n="email_lbl">البريد</span><span class="val">contact@wamdarc.com</span></a>
-            <a href="https://x.com/wamdarc" target="_blank" rel="noopener"><span class="lbl" data-i18n="x_lbl">إكس</span><span class="val">@wamdarc</span></a>
-            <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener"><span class="lbl" data-i18n="ig_lbl">إنستقرام</span><span class="val">@wamdarc</span></a>
-          </div>
-        </div>
-
-        <form id="contactForm" action="https://formsubmit.co/contact@wamdarc.com" method="POST" novalidate>
-          <h3 data-i18n="form_title">أرسل لنا رسالة</h3>
-          <input type="hidden" name="_subject" id="fSubject" value="رسالة جديدة من موقع wamdarc.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_next" id="fNext" value="https://wamdarc.com/thanks.html">
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="row2">
-            <label><span data-i18n="f_name">الاسم</span><input type="text" name="name" required maxlength="80" data-i18n-ph="ph_name" placeholder="اسمك الكريم"></label>
-            <label><span data-i18n="f_email">بريدك الإلكتروني</span><input type="email" name="email" required maxlength="120" data-i18n-ph="ph_email" placeholder="name@example.com"></label>
-          </div>
-          <label><span data-i18n="f_msg">رسالتك</span><textarea name="message" required minlength="10" maxlength="3000" data-i18n-ph="ph_msg" placeholder="اكتب رسالتك هنا…"></textarea></label>
-          <label class="q"><span id="qText"></span><input type="text" id="qAns" inputmode="numeric" autocomplete="off" required data-i18n-ph="ph_q" placeholder="اكتب الناتج بالأرقام"></label>
-          <p class="err" id="fErr" role="alert"></p>
-          <button class="btn btn-primary" type="submit" data-i18n="f_send">إرسال</button>
-          <p class="note" data-i18n="f_note">محمي من الرسائل المزعجة. بعد الإرسال قد يُطلب منك تأكيد أنك لست روبوتًا.</p>
-        </form>
-      </div>
-    </div>
-  </section>
+    <label><span data-i18n="f_msg">رسالتك</span><textarea name="message" required minlength="10" maxlength="3000" data-ph="ph_msg" placeholder="اكتب رسالتك هنا…"></textarea></label>
+    <label class="q"><span id="qText"></span><input type="text" id="qAns" inputmode="numeric" autocomplete="off" required data-ph="ph_q" placeholder="الجواب"></label>
+    <p class="err" id="fErr" role="alert"></p>
+    <button class="btn btn-primary" type="submit"><span data-i18n="f_send">إرسال</span></button>
+    <p class="note"><span data-i18n="f_note">قد تظهر صفحة «أنا لست روبوت» قبل الإرسال.</span></p>
+  </form>
+</div></div></section>
 </main>
-
-<footer>
-  <div class="wrap row">
-    <span id="rights"></span>
-    <img src="assets/logo-horizontal-on-dark.svg" alt="WAMD ARC">
-  </div>
-</footer>
-
-<script>
-(function(){
-  var T = {"ar": {"title": "وَمْض آرك | WAMD ARC", "nav_about": "من نحن", "nav_services": "خدماتنا", "nav_products": "منتجاتنا", "nav_values": "قيمنا", "nav_contact": "تواصل معنا", "lang_btn": "EN", "tag": "الشرارة. المسار. المستقبل.", "tag2": "Spark. Path. Future.", "cta_contact": "تواصل معنا", "cta_services": "خدماتنا", "about_title": "من نحن؟", "about_text": "وَمْض آرك علامة تقنية سعودية طموحة، تبني حلولًا ذكية وتقنيات متقدمة تسهم في تشكيل مستقبل أكثر اتصالًا وذكاءً. نؤمن أن الابتكار يبدأ بشرارة، ثم يأخذ مساره إلى واقع ملموس.", "p1_t": "الشرارة", "p1_d": "كل منتج يبدأ بفكرة جريئة", "p2_t": "المسار", "p2_d": "خطوات واضحة من الفكرة إلى الإطلاق", "p3_t": "المستقبل", "p3_d": "منتجات تكبر وتستمر مع الناس", "services_title": "خدماتنا", "services_sub": "What we build", "s1_t": "تطبيقات الويب والجوال", "s1_s": "Web & Mobile Apps", "s1_d": "تطبيقات سريعة وبسيطة تشتغل على كل الأجهزة.", "s2_t": "لوحات البيانات", "s2_s": "Dashboards", "s2_d": "أرقامك واضحة في مكان واحد تساعدك تقرر.", "s3_t": "المتاجر الإلكترونية", "s3_s": "E-commerce", "s3_d": "متاجر أنيقة تبيع منتجاتك بسهولة.", "s4_t": "الأتمتة والذكاء الاصطناعي", "s4_s": "Automation & AI", "s4_d": "نوفّر وقتك بأتمتة المهام وأدوات ذكية.", "products_title": "منتجاتنا", "products_sub": "Built by WAMD ARC", "pr1_t": "سهم", "pr1_d": "بوصلة بسيطة تدلّك على وجهتك بسهم واحد، حتى بدون إنترنت.", "pr2_t": "المصاريف", "pr2_d": "تتبّع مصاريفك اليومية بلمسة من جوالك.", "pr3_t": "متتبع الأسعار", "pr3_d": "قارن أسعار مشترياتك وتابع تغيّرها.", "live": "متاح", "soon": "قريبًا", "pr1_open": "افتح سهم", "pr1_f1": "يعمل بدون إنترنت", "pr1_f2": "القبلة ومواقيت الصلاة", "pr1_f3": "احفظ مواقعك المفضلة", "pr4_t": "فلق", "pr4_d": "مواقيت الصلاة والقبلة والأذكار والقمر ومنازله في صفحة واحدة، تعمل بدون إنترنت.", "pr4_open": "افتح فلق", "pr4_f1": "مواقيت الصلاة وتنبيهاتها", "pr4_f2": "أذكار الصباح والمساء", "pr4_f3": "أطوار القمر ومنازله", "pr5_t": "خُطى", "pr5_d": "سجل أسفارك على كرة أرضية تدورها بإصبعك، مع صفحة لكل رحلة وجواز بأختام كل دولة زرتها.", "pr5_open": "افتح خُطى", "pr5_f1": "كرة أرضية تفاعلية", "pr5_f2": "صور ويوميات لكل رحلة", "pr5_f3": "جواز بأختام الدول", "pr1_alt1": "شاشة سهم الرئيسية", "pr1_alt2": "المواقع المفضلة", "pr1_alt3": "اتجاه القبلة", "values_title": "قيمنا", "values_sub": "Our values", "v1_t": "الابتكار", "v1_s": "Innovation", "v1_d": "تحويل الأفكار إلى حلول.", "v2_t": "التميّز", "v2_s": "Excellence", "v2_d": "الجودة في كل تفصيلة.", "v3_t": "التكامل", "v3_s": "Integration", "v3_d": "ربط التقنية بالإنسان.", "v4_t": "الاستدامة", "v4_s": "Sustainability", "v4_d": "بناء مستقبل أفضل.", "contact_title": "تواصل معنا", "contact_sub": "Let’s build your next spark", "contact_lead": "عندك فكرة تبي لها مسار؟ راسلنا ونرد عليك في أقرب وقت.", "email_lbl": "البريد", "x_lbl": "إكس", "ig_lbl": "إنستقرام", "form_title": "أرسل لنا رسالة", "f_name": "الاسم", "f_email": "بريدك الإلكتروني", "f_msg": "رسالتك", "ph_name": "اسمك الكريم", "ph_email": "name@example.com", "ph_msg": "اكتب رسالتك هنا…", "f_q": "سؤال تحقق: كم ناتج {a} + {b}؟", "ph_q": "اكتب الناتج بالأرقام", "f_send": "إرسال", "err_q": "الناتج غير صحيح، حاول مرة ثانية.", "f_note": "محمي من الرسائل المزعجة. بعد الإرسال قد يُطلب منك تأكيد أنك لست روبوتًا.", "subject": "رسالة جديدة من موقع wamdarc.com", "rights": "© {y} وَمْض آرك. جميع الحقوق محفوظة."}, "en": {"title": "WAMD ARC | وَمْض آرك", "nav_about": "About", "nav_services": "Services", "nav_products": "Products", "nav_values": "Values", "nav_contact": "Contact", "lang_btn": "عربي", "tag": "Spark. Path. Future.", "tag2": "الشرارة. المسار. المستقبل.", "cta_contact": "Contact us", "cta_services": "Our services", "about_title": "Who we are", "about_text": "WAMD ARC is an ambitious Saudi tech brand, building intelligent solutions and advanced technologies that shape a more connected and intelligent future. We believe innovation starts with a spark — and then takes its path to a tangible reality.", "p1_t": "Spark", "p1_d": "Every product starts with a bold idea", "p2_t": "Path", "p2_d": "Clear steps from idea to launch", "p3_t": "Future", "p3_d": "Products that grow with people", "services_title": "Services", "services_sub": "", "s1_t": "Web & Mobile Apps", "s1_s": "", "s1_d": "Fast, simple apps that work on every device.", "s2_t": "Dashboards", "s2_s": "", "s2_d": "All your numbers, clear and in one place.", "s3_t": "E-commerce", "s3_s": "", "s3_d": "Elegant stores that make selling easy.", "s4_t": "Automation & AI", "s4_s": "", "s4_d": "Save time with automation and smart tools.", "products_title": "Products", "products_sub": "", "pr1_t": "Sahm", "pr1_d": "A simple compass that points you to your destination with one arrow — even offline.", "pr2_t": "Expenses", "pr2_d": "Track your daily spending with a tap.", "pr3_t": "Price Tracker", "pr3_d": "Compare prices and follow how they change.", "live": "LIVE", "soon": "COMING SOON", "pr1_open": "Open Sahm", "pr1_f1": "Works offline", "pr1_f2": "Qibla & prayer times", "pr1_f3": "Save your places", "pr4_t": "Falaq", "pr4_d": "Prayer times, Qibla, adhkar and the moon with its mansions — in one page that works offline.", "pr4_open": "Open Falaq", "pr4_f1": "Prayer times & alerts", "pr4_f2": "Morning & evening adhkar", "pr4_f3": "Moon phases & mansions", "pr5_t": "Khuta", "pr5_d": "Log your travels on a globe you spin with your finger — a page for every trip and a passport stamped with every country you visit.", "pr5_open": "Open Khuta", "pr5_f1": "Interactive 3D globe", "pr5_f2": "Photos & journal per trip", "pr5_f3": "Passport stamps", "pr1_alt1": "Sahm home screen", "pr1_alt2": "Saved places", "pr1_alt3": "Qibla direction", "values_title": "Our values", "values_sub": "", "v1_t": "Innovation", "v1_s": "", "v1_d": "Turning ideas into solutions.", "v2_t": "Excellence", "v2_s": "", "v2_d": "Quality in every detail.", "v3_t": "Integration", "v3_s": "", "v3_d": "Connecting technology and people.", "v4_t": "Sustainability", "v4_s": "", "v4_d": "Building a better tomorrow.", "contact_title": "Contact us", "contact_sub": "", "contact_lead": "Have an idea that needs a path? Send us a message and we’ll get back to you soon.", "email_lbl": "Email", "x_lbl": "X", "ig_lbl": "Instagram", "form_title": "Send us a message", "f_name": "Name", "f_email": "Your email", "f_msg": "Message", "ph_name": "Your name", "ph_email": "name@example.com", "ph_msg": "Write your message…", "f_q": "Quick check: what is {a} + {b}?", "ph_q": "Type the answer in digits", "f_send": "Send", "err_q": "That answer isn’t right — please try again.", "f_note": "Protected from spam. After sending you may be asked to confirm you’re not a robot.", "subject": "New message from wamdarc.com", "rights": "© {y} WAMD ARC. All rights reserved."}};
-  var a = 2 + Math.floor(Math.random()*8), b = 1 + Math.floor(Math.random()*9);
-  var lang = 'ar';
-  function fmt(s, o){ return s.replace(/\{(\w)\}/g, function(_, k){ return o[k]; }); }
-  function setLang(l){
-    lang = (l === 'en') ? 'en' : 'ar';
-    var d = T[lang], h = document.documentElement;
-    h.lang = lang; h.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.title = d.title;
-    document.querySelectorAll('[data-i18n]').forEach(function(el){ var v = d[el.getAttribute('data-i18n')]; if (v != null) el.textContent = v; });
-    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){ var v = d[el.getAttribute('data-i18n-ph')]; if (v != null) el.placeholder = v; });
-    document.getElementById('qText').textContent = fmt(d.f_q, {a:a, b:b});
-    document.getElementById('rights').textContent = fmt(d.rights, {y:new Date().getFullYear()});
-    document.getElementById('fSubject').value = d.subject;
-    document.getElementById('fNext').value = 'https://wamdarc.com/thanks.html?lang=' + lang;
-    document.getElementById('fErr').textContent = '';
-    try { localStorage.setItem('lang', lang); } catch(e) {}
-  }
-  var q = new URLSearchParams(location.search).get('lang'), saved = null;
-  try { saved = localStorage.getItem('lang'); } catch(e) {}
-  setLang(q || saved || 'ar');
-  document.getElementById('langBtn').addEventListener('click', function(){ setLang(lang === 'ar' ? 'en' : 'ar'); });
-
-  var form = document.getElementById('contactForm');
-  form.addEventListener('submit', function(e){
-    var err = document.getElementById('fErr');
-    var ans = document.getElementById('qAns').value.trim().replace(/[٠-٩]/g, function(c){ return '٠١٢٣٤٥٦٧٨٩'.indexOf(c); });
-    if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); return; }
-    if (parseInt(ans, 10) !== a + b) {
-      e.preventDefault(); err.textContent = T[lang].err_q;
-      a = 2 + Math.floor(Math.random()*8); b = 1 + Math.floor(Math.random()*9);
-      document.getElementById('qText').textContent = fmt(T[lang].f_q, {a:a, b:b});
-      document.getElementById('qAns').value = '';
-      return;
-    }
-  });
-})();
-</script>
+<footer><div class="wrap">
+  <div class="fl"><img src="assets/logo-horizontal-on-dark.svg" alt="WAMD ARC"><span id="rights" data-i18n="rights" data-fmt="1">© 2026 WAMD ARC. جميع الحقوق محفوظة.</span></div>
+  <nav>
+    <a href="sahm/"><span data-i18n="sahm_name">سهم</span></a><a href="falaq/"><span data-i18n="falaq_name">فلق</span></a><a href="khuta/"><span data-i18n="khuta_name">خُطى</span></a>
+    <a href="privacy/"><span data-i18n="privacy">سياسة الخصوصية</span></a>
+    <a href="https://x.com/wamdarc" target="_blank" rel="noopener" class="ltr">X</a>
+    <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener" class="ltr">Instagram</a>
+  </nav>
+</div></footer><script src="assets/i18n.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
 </body>
 </html>

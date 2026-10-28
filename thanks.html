@@ -1,27 +1,53 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>شكرًا | WAMD ARC</title><meta name="robots" content="noindex">
+<html lang="ar" dir="rtl" data-page="thanks.html" data-title="title_thanks" data-desc="th_d">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تم الإرسال | وَمْض آرك</title>
+<meta name="description" content="شكرًا لتواصلك مع وَمْض آرك. سنرد عليك على بريدك في أقرب وقت.">
+<meta name="theme-color" content="#111317">
+<link rel="canonical" href="https://wamdarc.com/thanks.html">
 <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;min-height:100svh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 70% 55% at 50% 40%,#1B1E25 0%,#111317 70%);color:#F3F3F1;font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif;text-align:center;padding:24px}
-  html[lang=en] body{font-family:'Montserrat',Arial,sans-serif}
-  img{width:min(360px,70vw)} h1{font-size:clamp(28px,5vw,42px);margin:36px 0 8px} p{color:#B9BEC6;font-size:18px;margin:0 0 32px}
-  a{display:inline-block;background:#FF5A1F;color:#fff;text-decoration:none;padding:12px 30px;border-radius:999px;font-weight:600}
-</style></head>
-<body><main>
-  <img src="assets/logo-stacked-on-dark.svg" alt="WAMD ARC">
-  <h1 id="t">وصلتنا رسالتك، شكرًا لك</h1>
-  <p id="d">بنرد عليك في أقرب وقت.</p>
-  <a id="b" href="/">العودة للموقع</a>
-</main>
-<script>
-  var l = new URLSearchParams(location.search).get('lang');
-  try { l = l || localStorage.getItem('lang'); } catch(e) {}
-  if (l === 'en') {
-    document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; document.title = 'Thank you | WAMD ARC';
-    document.getElementById('t').textContent = 'Message received — thank you';
-    document.getElementById('d').textContent = 'We’ll get back to you soon.';
-    var b = document.getElementById('b'); b.textContent = 'Back to website'; b.href = '/?lang=en';
-  }
-</script></body></html>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WAMD ARC | وَمْض آرك">
+<meta property="og:url" content="https://wamdarc.com/thanks.html">
+<meta property="og:title" content="تم الإرسال | وَمْض آرك">
+<meta property="og:description" content="شكرًا لتواصلك مع وَمْض آرك. سنرد عليك على بريدك في أقرب وقت.">
+<meta property="og:image" content="https://wamdarc.com/assets/og-image.png?v=4">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="ar_SA"><meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wamdarc">
+<link rel="alternate" hreflang="ar" href="https://wamdarc.com/thanks.html">
+<link rel="alternate" hreflang="en" href="https://wamdarc.com/thanks.html?lang=en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=4">
+<script>(function(){try{var q=new URLSearchParams(location.search).get('lang'),l=q||localStorage.getItem('lang');if(l==='en'){var d=document.documentElement;d.lang='en';d.dir='ltr';}}catch(e){}})();</script>
+<meta name="robots" content="noindex">
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="WAMD ARC"><img src="assets/logo-horizontal-on-light.svg" alt="WAMD ARC" width="190" height="24"></a>
+  <div class="nav-r"><ul><li><a href="index.html#apps"><span data-i18n="nav_apps">تطبيقاتنا</span></a></li><li><a href="index.html#promise"><span data-i18n="nav_promise">وعدنا</span></a></li><li><a href="index.html#install"><span data-i18n="nav_install">طريقة التثبيت</span></a></li><li><a href="index.html#about"><span data-i18n="nav_about">من نحن</span></a></li><li><a href="index.html#contact"><span data-i18n="nav_contact">تواصل معنا</span></a></li></ul><button class="lang" id="langBtn" type="button" data-i18n="lang_btn">EN</button></div>
+</div></header>
+<main class="center"><div>
+  <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+  <h1><span data-i18n="th_t">وصلتنا رسالتك</span></h1><p><span data-i18n="th_d">شكرًا لتواصلك مع وَمْض آرك. سنرد عليك على بريدك في أقرب وقت.</span></p>
+  
+  <a class="btn btn-primary" href="index.html"><span data-i18n="back_home">العودة للرئيسية</span></a>
+</div></main>
+<footer><div class="wrap">
+  <div class="fl"><img src="assets/logo-horizontal-on-dark.svg" alt="WAMD ARC"><span id="rights" data-i18n="rights" data-fmt="1">© 2026 WAMD ARC. جميع الحقوق محفوظة.</span></div>
+  <nav>
+    <a href="sahm/"><span data-i18n="sahm_name">سهم</span></a><a href="falaq/"><span data-i18n="falaq_name">فلق</span></a><a href="khuta/"><span data-i18n="khuta_name">خُطى</span></a>
+    <a href="privacy/"><span data-i18n="privacy">سياسة الخصوصية</span></a>
+    <a href="https://x.com/wamdarc" target="_blank" rel="noopener" class="ltr">X</a>
+    <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener" class="ltr">Instagram</a>
+  </nav>
+</div></footer><script src="assets/i18n.js?v=4"></script>
+<script src="assets/site.js?v=4"></script>
+</body>
+</html>
