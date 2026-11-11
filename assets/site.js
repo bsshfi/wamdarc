@@ -19,6 +19,8 @@
       if (el.hasAttribute('data-html')) el.innerHTML = v; else el.textContent = v;
     });
     document.querySelectorAll('[data-ph]').forEach(function (el) { var v = d[el.getAttribute('data-ph')]; if (v != null) el.placeholder = v; });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-aria')]; if (v != null) el.setAttribute('aria-label', v); });
+    document.querySelectorAll('[data-i18n-title]').forEach(function (el) { var v = d[el.getAttribute('data-i18n-title')]; if (v != null) el.title = v; });
     var q = $('#qText'); if (q) q.textContent = fmt(d.f_q, { a: qa, b: qb });
     var sub = $('#fSubject'); if (sub) sub.value = d.subject;
     var nx = $('#fNext'); if (nx) nx.value = 'https://wamdarc.com/thanks.html' + (lang === 'en' ? '?lang=en' : '');
