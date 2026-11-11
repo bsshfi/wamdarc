@@ -23,7 +23,7 @@ a{color:inherit;text-decoration:none}
 .nav .wrap{display:flex;justify-content:space-between;align-items:center;height:80px;gap:20px}
 .logo{display:flex;align-items:center;background:var(--paper);border-radius:14px;padding:9px 18px;box-shadow:0 6px 24px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.06);transition:transform .2s}
 .logo:hover{transform:translateY(-1px)}
-.logo img{height:30px;width:auto;display:block}
+.logo img{height:40px;width:auto;display:block}
 .nav-r{display:flex;align-items:center;gap:26px}
 .nav ul{display:flex;gap:26px;list-style:none;font-size:15px}
 .nav ul a{color:var(--soft);transition:color .2s}
@@ -192,7 +192,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 footer nav{display:flex;gap:22px;flex-wrap:wrap}
 footer nav a:hover{color:var(--white)}
 footer .fl{display:flex;align-items:center;gap:16px}
-footer .fl img{height:44px;opacity:.95}
+footer .fl img{height:56px;opacity:.95}
 
 /* ---------- app page ---------- */
 .ahero{position:relative;overflow:hidden;padding:150px 0 0;background:radial-gradient(ellipse 70% 70% at 50% 100%, rgba(var(--g),.22), transparent 70%), linear-gradient(180deg,#1A1247, var(--ink))}
@@ -348,7 +348,7 @@ html[lang=en] .hero h1 .h1en{display:inline}
 }
 @media (max-width:560px){
   .nav .wrap{height:68px}
-  .logo{padding:8px 13px;border-radius:12px}.logo img{height:24px}
+  .logo{padding:7px 12px;border-radius:12px}.logo img{height:30px}
   .prom{grid-template-columns:1fr 1fr;gap:12px}
   .prom div{padding:20px 16px}
   .feats{grid-template-columns:1fr}
