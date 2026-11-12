@@ -74,3 +74,9 @@
     $('#fSubject').value = T[lang].subject + (tp ? ' — ' + tp.value : '');
   });
 })();
+
+/* مؤشر بطاقات التطبيقات على الجوال */
+(function(){var r=document.getElementById('appsRail');if(!r)return;var n=r.children.length,d=document.createElement('div');d.className='adots';d.setAttribute('aria-hidden','true');
+for(var k=0;k<n;k++)d.appendChild(document.createElement('i'));r.after(d);
+function up(){var c=r.children[0];if(!c)return;var w=c.getBoundingClientRect().width+18,x=Math.abs(r.scrollLeft),k=Math.min(n-1,Math.round(x/w));[].forEach.call(d.children,function(e,q){e.classList.toggle('on',q===k)})}
+r.addEventListener('scroll',up,{passive:true});up();})();
