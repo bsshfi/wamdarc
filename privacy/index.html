@@ -1,64 +1,71 @@
 <!doctype html>
-<html lang="ar" dir="rtl" data-page="privacy" data-title="title_privacy" data-desc="desc_privacy">
+<html lang="ar" dir="rtl" data-d="day" data-title="title_pv" data-desc="desc_pv">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>سياسة الخصوصية | وَمْض آرك</title>
-<meta name="description" content="كيف تتعامل تطبيقات وَمْض آرك وموقعها مع بياناتك.">
-<meta name="theme-color" content="#0E0A2B">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>سياسة الخصوصية | ومض آرك</title>
+<meta name="description" content="كيف تتعامل تطبيقات ومض آرك وموقعها مع بياناتك.">
+<meta name="theme-color" content="#F6F5FC" id="tc">
+<script>(function(){var d=document.documentElement,m='day',l='ar';try{m=localStorage.getItem('wa-theme')==='night'?'night':'day';l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('lang')||'ar'}catch(e){}d.dataset.d=m;if(m==='night')document.getElementById('tc').content='#17104A';if(l==='en'){d.lang='en';d.dir='ltr'}})();</script>
 <link rel="canonical" href="https://wamdarc.com/privacy/">
-<link rel="icon" href="../assets/favicon.svg?v=6" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=6">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="WAMD ARC | وَمْض آرك">
-<meta property="og:url" content="https://wamdarc.com/privacy/">
-<meta property="og:title" content="سياسة الخصوصية | وَمْض آرك">
-<meta property="og:description" content="كيف تتعامل تطبيقات وَمْض آرك وموقعها مع بياناتك.">
-<meta property="og:image" content="https://wamdarc.com/assets/og-image.png?v=11">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<link rel="alternate" hreflang="ar" href="https://wamdarc.com/privacy/"><link rel="alternate" hreflang="en" href="https://wamdarc.com/privacy/?lang=en"><link rel="alternate" hreflang="x-default" href="https://wamdarc.com/privacy/">
+<link rel="icon" href="/assets/favicon.svg?v=12" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=12">
+<meta property="og:type" content="website"><meta property="og:site_name" content="ومض آرك | WAMD ARC">
+<meta property="og:url" content="https://wamdarc.com/privacy/"><meta property="og:title" content="سياسة الخصوصية | ومض آرك"><meta property="og:description" content="كيف تتعامل تطبيقات ومض آرك وموقعها مع بياناتك.">
+<meta property="og:image" content="https://wamdarc.com/assets/og-image.png?v=12"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ar_SA"><meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@wamdarc">
-<link rel="alternate" hreflang="ar" href="https://wamdarc.com/privacy/">
-<link rel="alternate" hreflang="en" href="https://wamdarc.com/privacy/?lang=en">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css?v=11">
-<script>(function(){try{var q=new URLSearchParams(location.search).get('lang'),l=q||localStorage.getItem('lang');if(l==='en'){var d=document.documentElement;d.lang='en';d.dir='ltr';}}catch(e){}})();</script>
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@wamdarc">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=12">
 </head>
 <body>
-<header class="nav" id="nav"><div class="wrap">
-  <a class="logo" href="../index.html" aria-label="WAMD ARC"><img src="../assets/logo-compact-on-light.svg?v=11" alt="WAMD ARC | وَمْض آرك" width="252" height="40"></a>
-  <div class="nav-r"><ul><li><a href="../index.html#apps"><span data-i18n="nav_apps">تطبيقاتنا</span></a></li><li><a href="../index.html#news"><span data-i18n="nav_news">جديدنا</span></a></li><li><a href="../index.html#promise"><span data-i18n="nav_promise">وعدنا</span></a></li><li><a href="../index.html#install"><span data-i18n="nav_install">طريقة التثبيت</span></a></li><li><a href="../index.html#about"><span data-i18n="nav_about">من نحن</span></a></li><li><a href="../index.html#contact"><span data-i18n="nav_contact">تواصل معنا</span></a></li></ul><button class="lang" id="langBtn" type="button" data-i18n="lang_btn">EN</button></div>
-</div></header>
-<main class="doc"><div class="wrap">
-  <span class="eyebrow">PRIVACY</span>
-  <h1><span data-i18n="privacy">سياسة الخصوصية</span></h1>
-  <p class="meta"><span data-i18n="pv_updated">آخر تحديث: 12 نوفمبر 2026</span></p>
-  <div class="tldr"><h2><span data-i18n="pv_tldr">باختصار</span></h2><ul><li><span data-i18n="pv_t1">لا نطلب منك إنشاء حساب في أي تطبيق.</span></li><li><span data-i18n="pv_t2">بيانات تطبيقاتنا (مواقعك المحفوظة، رحلاتك، صورك، أسماء أطفالك، إعداداتك) تُحفظ على جهازك.</span></li><li><span data-i18n="pv_t3">لا نعرض إعلانات ولا نبيع أي بيانات، ولا نستخدم كوكيز أو أدوات تتبع خارجية.</span></li><li><span data-i18n="pv_t4">ما يُرسل خارج جهازك محدود وموضّح أدناه لكل تطبيق.</span></li></ul></div>
-  <h2 class="s" id="site"><span data-i18n="pv_site_h">الموقع wamdarc.com</span></h2><p><span data-i18n="pv_site_p1">لا يستخدم الموقع ملفات تعريف ارتباط (كوكيز) ولا أدوات تحليل خارجية. يحفظ متصفحك اختيارك للغة، والمعرّف العشوائي الخاص بعدّاد الاستخدام الموضّح أدناه.</span></p><p><span data-i18n="pv_site_p2">عند إرسال نموذج «تواصل معنا» يُرسل اسمك وبريدك ورسالتك عبر خدمة FormSubmit إلى بريدنا contact@wamdarc.com، ونستخدمها للرد عليك فقط.</span></p><p><span data-i18n="pv_site_p3">تُحمَّل الخطوط من Google Fonts، وقد يتلقى خادمها عنوان IP الخاص بك كأي طلب على الإنترنت.</span></p><h2 class="s" id="sahm"><img src="../assets/sahm/icon.webp" alt=""><span data-i18n="pv_sahm_h">سهم</span></h2><p><span data-i18n="pv_sahm_p1">يستخدم سهم موقعك (GPS) والبوصلة على جهازك لتوجيهك. مواقعك المحفوظة ومسار رحلتك تُخزَّن على جهازك فقط.</span></p><p><span data-i18n="pv_sahm_p2">عند توفر الإنترنت، يُرسل سهم إحداثياتك إلى خدمتين لعرض معلومات إضافية: BigDataCloud لاسم المكان، وOpen-Meteo لحالة الطقس. لا يُرسل معها أي معرّف شخصي.</span></p><p><span data-i18n="pv_sahm_p3">ميزة «إرسال موقعي» لا تُرسل شيئًا بنفسها؛ تفتح نافذة المشاركة في جهازك وأنت من يختار لمن تُرسل.</span></p><h2 class="s" id="falaq"><img src="../assets/falaq/icon.webp" alt=""><span data-i18n="pv_falaq_h">فلق</span></h2><p><span data-i18n="pv_falaq_p1">يحسب فلق مواقيت الصلاة والقبلة وأطوار القمر على جهازك اعتمادًا على موقعك، وتبقى إعداداتك وتقدّم الأذكار على جهازك.</span></p><p><span data-i18n="pv_falaq_p2">إذا فعّلت تنبيهات الصلاة فقط، يُرسل فلق إلى خادم التنبيهات الخاص بنا: اشتراك التنبيهات الذي ينشئه متصفحك، وإحداثياتك، ومنطقتك الزمنية، وإعدادات الحساب والصلوات المختارة واللغة — لكي يرسل التنبيه في وقته. عند إيقاف التنبيهات يُحذف الاشتراك.</span></p><h2 class="s" id="khuta"><img src="../assets/khuta/icon.webp" alt=""><span data-i18n="pv_khuta_h">خُطى</span></h2><p><span data-i18n="pv_khuta_p1">يحفظ خُطى رحلاتك وصورك ويومياتك في قاعدة بيانات داخل متصفح جهازك (IndexedDB)، ولا يُرسل منها شيئًا إلى أي خادم.</span></p><p><span data-i18n="pv_khuta_p2">النسخة الاحتياطية ملف تصدّره أنت وتحفظه حيث تشاء. وربط Google Drive اختياري: إذا فعّلته تنتقل نسختك مباشرة من جهازك إلى درايفك أنت في مجلد «خُطى Khuta»، دون المرور بخوادمنا، بصلاحية واحدة (drive.file) لا تسمح للتطبيق إلا بالملفات التي أنشأها. وتقدر تفك الربط متى شئت من إعدادات التطبيق.</span></p><h2 class="s" id="siraj"><img src="../assets/siraj/icon.webp" alt=""><span data-i18n="pv_siraj_h">سِراج</span></h2><p><span data-i18n="pv_siraj_p1">يحفظ سِراج أسماء أطفالك وأعمارهم وشكل شخصياتهم وسجل القراءة على جهازك. القصص كلها داخل التطبيق، ولا يستخدم أي خدمة ذكاء اصطناعي.</span></p><p><span data-i18n="pv_siraj_p2">إذا ربطت أجهزة العائلة، تُشفَّر بيانات العائلة وسجل القراءة على جهازك (AES-256) برمز العائلة قبل إرسالها إلى خادم المزامنة الخاص بنا، والخادم لا يعرف إلا بصمة الرمز ولا يستطيع قراءة الأسماء.</span></p><p><span data-i18n="pv_siraj_p3">إذا فعّلت الإشعارات، يحفظ الخادم اشتراك الإشعارات ونوع الجهاز (وليّ أمر أو طفل) ووقت النوم والمنطقة الزمنية لإرسال التذكير. نص الإشعار الذي يحمل أسماء الأطفال يُكتب على جهازك نفسه.</span></p><h2 class="s" id="nabd"><img src="../assets/nabd/icon.webp" alt=""><span data-i18n="pv_nabd_h">نَبْض</span></h2><p><span data-i18n="pv_nabd_p1">كل محتوى نَبْض (الأسماء والرسائل والصور والصوت والرسومات) يتشفّر على الجهاز بمفتاح العائلة قبل ما يطلع، والخادم ما يقدر يقراه. الرسالة تبقى في الخادم مشفّرة لين توصل لكل أجهزة العائلة ثم تنحذف، وبحد أقصى ٣ أيام. الأرشيف على الأجهزة فقط.</span></p><p><span data-i18n="pv_nabd_p2">يحفظ الخادم ما يلزم لتشغيل العائلة: معرّفات الأفراد ونوعهم (والد أو طفل) وصلاحيات الإشراف وبصمة الرمز السري، وبيانات كل جهاز (النوع والإصدار والمنطقة الزمنية وآخر اتصال واشتراك الإشعارات). نص الإشعار يُكتب على الجهاز نفسه.</span></p><h2 class="s" id="stats"><span data-i18n="pv_stats_h">عدّاد الاستخدام</span></h2><p><span data-i18n="pv_stats_p1">لنعرف كم شخصًا يستخدم الموقع والتطبيقات، يرسل كل منها إلى خادمنا عند الفتح ثم مرة كل دقيقة أثناء الاستخدام: اسم التطبيق، ومعرّفًا عشوائيًا يُنشأ على جهازك ولا يرتبط بهويتك، وهل التطبيق مضاف إلى الشاشة الرئيسية، ونوع الجهاز (آيفون أو أندرويد أو كمبيوتر)، ورقم الإصدار، واللغة، وفي الموقع اسم الصفحة.</span></p><p><span data-i18n="pv_stats_p2">لا يُرسل العدّاد أسماء ولا موقعًا جغرافيًا ولا أي محتوى من التطبيق، ولا نخزّن عنوان IP. تُحذف السجلات اليومية بعد ١٨٠ يومًا، ويمكنك إزالة المعرّف بمسح بيانات الموقع من إعدادات المتصفح.</span></p><h2 class="s" id="delete"><span data-i18n="pv_del_h">حذف بياناتك</span></h2><p><span data-i18n="pv_del_p">لأن البيانات على جهازك، يكفي حذف التطبيق من الشاشة الرئيسية أو مسح بيانات الموقع من إعدادات المتصفح. ولأي طلب يخص رسائلك أو تنبيهات فلق، راسلنا.</span></p><h2 class="s" id="contact"><span data-i18n="pv_contact_h">تواصل</span></h2><p><span data-i18n="pv_contact_p">لأي سؤال عن الخصوصية: </span><a class="u ltr" href="mailto:contact@wamdarc.com">contact@wamdarc.com</a></p>
-</div></main>
-<footer><div class="wrap">
-  <div class="fgrid">
-    <div class="fbrand">
-      <a href="../index.html" aria-label="WAMD ARC"><img src="../assets/logo-compact-on-dark.svg?v=11" alt="WAMD ARC | وَمْض آرك"></a>
-      <p><span data-i18n="foot_tag">نصنع غدًا أذكى — تطبيقات بسيطة وخاصة، لكل يوم ولكل العائلة.</span></p>
-      <div class="fsoc">
-        <a href="https://x.com/wamdarc" target="_blank" rel="noopener" aria-label="X"><span class="ltr">X</span></a>
-        <a href="https://instagram.com/wamdarc" target="_blank" rel="noopener" aria-label="Instagram"><span class="ltr">Instagram</span></a>
+<a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="ومض آرك WAMD ARC">
+      <img class="on-light" src="/assets/logo-horizontal-on-light.svg?v=12" alt="WAMD ARC ومض ارك" width="206" height="32">
+      <img class="on-dark" src="/assets/logo-horizontal-on-dark.svg?v=12" alt="WAMD ARC ومض ارك" width="206" height="32">
+    </a>
+    <nav aria-label="القائمة" data-i18n-aria="nav_menu">
+      <ul id="navList"><li><a href="/#apps" data-i18n="nav_apps">تطبيقاتنا</a></li><li><a href="/#promise" data-i18n="nav_promise">وعدنا</a></li><li><a href="/#install" data-i18n="nav_install">التثبيت</a></li><li><a href="/#about" data-i18n="nav_about">من نحن</a></li><li><a href="/#contact" data-i18n="nav_contact">تواصل معنا</a></li><li><a href="/updates/" data-i18n="nav_news">جديدنا</a></li></ul>
+      <div class="tools">
+        <button class="ib" id="themeBtn" type="button" aria-label="الوضع الداكن"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.5 8.5 0 0 1 9.4 4a8.5 8.5 0 1 0 10.6 10.6z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
+        <button class="lang" id="langBtn" type="button" lang="en" aria-label="English" data-i18n-aria="lang_aria" data-i18n="lang_btn">EN</button>
+        <button class="ib menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navList" aria-label="القائمة" data-i18n-aria="nav_menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       </div>
-    </div>
-    <div class="fcol"><h4><span data-i18n="foot_apps">تطبيقاتنا</span></h4>
-      <a href="../sahm/"><span data-i18n="sahm_name">سهم</span></a><a href="../falaq/"><span data-i18n="falaq_name">فلق</span></a><a href="../khuta/"><span data-i18n="khuta_name">خُطى</span></a><a href="../siraj/"><span data-i18n="siraj_name">سِراج</span></a><a href="../nabd/"><span data-i18n="nabd_name">نَبْض</span></a>
-    </div>
-    <div class="fcol"><h4><span data-i18n="foot_co">ومض آرك</span></h4>
-      <a href="../index.html#about"><span data-i18n="nav_about">من نحن</span></a><a href="../index.html#promise"><span data-i18n="nav_promise">وعدنا</span></a><a href="../index.html#install"><span data-i18n="nav_install">طريقة التثبيت</span></a><a href="../updates/"><span data-i18n="nav_news">جديدنا</span></a><a href="../index.html#faq"><span data-i18n="nav_faq">الأسئلة الشائعة</span></a><a href="../index.html#contact"><span data-i18n="nav_contact">تواصل معنا</span></a><a href="../privacy/"><span data-i18n="privacy">سياسة الخصوصية</span></a>
-    </div>
+    </nav>
   </div>
-  <div class="fbot"><span id="rights" data-i18n="rights" data-fmt="1">© 2026 WAMD ARC. جميع الحقوق محفوظة.</span><span class="ltr">wamdarc.com</span></div>
-</div></footer><script src="../assets/i18n.js?v=11"></script>
-<script src="../assets/site.js?v=11"></script>
-<script src="../assets/wamd-stats.js?v=11" data-app="site"></script>
+</header>
+
+<main id="main" class="doc">
+  <section class="dhead"><div class="wrap narrow"><h1 data-i18n="pv_h1">سياسة الخصوصية</h1><p data-i18n="pv_upd">آخر تحديث: ٢٤ نوفمبر ٢٠٢٦</p></div></section>
+  <div class="wrap narrow dbody prose">
+    <div class="tldr"><h2 data-i18n="pv_tldr">باختصار</h2><ul><li data-i18n="pv_t1">لا نطلب منك إنشاء حساب في أي تطبيق.</li><li data-i18n="pv_t2">بياناتك (أماكنك ورحلاتك وصورك وأسماء أطفالك وإعداداتك) تُحفظ على جهازك.</li><li data-i18n="pv_t3">لا نعرض إعلانات ولا نبيع أي بيانات، ولا نستخدم كوكيز أو أدوات تتبّع.</li><li data-i18n="pv_t4">ما يخرج من جهازك محدود، وموضّح أدناه لكل تطبيق.</li></ul></div>
+    <section><h2 data-i18n="pv_site_h">الموقع</h2><p data-i18n="pv_site_1">لا يستخدم الموقع كوكيز ولا أدوات تحليل خارجية. يحفظ متصفحك اختيارك للغة والمظهر، ومعرّف عدّاد الاستخدام الموضّح أدناه.</p><p data-i18n="pv_site_2">عند إرسال نموذج «تواصل معنا» يصلنا اسمك وبريدك ورسالتك عبر خدمة بريد موثوقة، ونستخدمها للرد عليك فقط.</p><p data-i18n="pv_site_3">نستعين بمزوّدي خدمات موثوقين لاستضافة الموقع وتحميل الخطوط، وقد يسجّلون عنوان IP ضمن السجلات المعتادة لأي موقع.</p></section>
+    <section class="pvapp" id="sahm" style="--c:#F5841F"><h3><img src="/assets/sahm/icon.webp" alt="" width="40" height="40"><span class="nm">سهم<i aria-hidden="true">|</i><span class="ltr">SAHM</span></span></h3><p data-i18n="pv_sahm_1">يُقرأ موقعك واتجاه جوالك لحظيًا لتوجيه السهم والقبلة ودليل النجوم، والحساب كله على جهازك. أماكنك ومجلداتك ومسارك تبقى على جهازك.</p><p data-i18n="pv_sahm_2">عند توفر الإنترنت يُرسل موقعك مقرّبًا وبدون أي معرّف لمعرفة اسم المكان والطقس. وإذا فعّلت الإشعارات نستقبل موقع المخيم والسيارة مقرّبًا لتذكيرك قبل الغروب. وربط Google Drive اختياري، وتنتقل نسختك من جوالك إلى درايفك أنت مباشرة.</p><a class="more" href="https://sahm.wamdarc.com/privacy.html"><span data-i18n="pv_full">السياسة الكاملة داخل التطبيق</span> <span class="ltr">sahm.wamdarc.com</span></a></section><section class="pvapp" id="falaq" style="--c:#5B7FA6"><h3><img src="/assets/falaq/icon.webp" alt="" width="40" height="40"><span class="nm">فلق<i aria-hidden="true">|</i><span class="ltr">FALAQ</span></span></h3><p data-i18n="pv_falaq_1">المواقيت والقبلة والقمر تُحسب على جهازك، وإعداداتك وتقدّمك في الأذكار تبقى عليه.</p><p data-i18n="pv_falaq_2">إذا فعّلت الإشعارات نستقبل اشتراك الإشعارات وموقعك مقرّبًا ومنطقتك الزمنية واختياراتك، لنرسل الأذان في وقته. وعند إيقافها يُحذف اشتراكك.</p><a class="more" href="https://falaq.wamdarc.com/privacy.html"><span data-i18n="pv_full">السياسة الكاملة داخل التطبيق</span> <span class="ltr">falaq.wamdarc.com</span></a></section><section class="pvapp" id="khuta" style="--c:#FF3E8A"><h3><img src="/assets/khuta/icon.webp" alt="" width="40" height="40"><span class="nm">خطى<i aria-hidden="true">|</i><span class="ltr">KHUTA</span></span></h3><p data-i18n="pv_khuta_1">رحلاتك وصورك ويومياتك وميزانياتك تُحفظ على جهازك ولا تصلنا. والنسخة الاحتياطية ملف تحفظه أنت حيث تشاء.</p><p data-i18n="pv_khuta_2">ربط Google Drive اختياري: تنتقل نسختك من جهازك إلى درايفك أنت مباشرة، بصلاحية لا تسمح للتطبيق إلا بالملفات التي أنشأها.</p><a class="more" href="https://khuta.wamdarc.com/privacy.html"><span data-i18n="pv_full">السياسة الكاملة داخل التطبيق</span> <span class="ltr">khuta.wamdarc.com</span></a></section><section class="pvapp" id="harf" style="--c:#12897C"><h3><img src="/assets/harf/icon.webp" alt="" width="40" height="40"><span class="nm">حرف<i aria-hidden="true">|</i><span class="ltr">HARF</span></span></h3><p data-i18n="pv_harf_1">اللعبة الجماعية تحفظ ما يلزم لتشغيلها وعرضها في السجل: اسم اللعبة، وأسماء اللاعبين كما كتبوها، وإجاباتهم ونقاطهم. لا نطلب رقم جوال ولا بريدًا ولا موقعًا، ولا يدخل اللعبة إلا من معه كودها.</p><p data-i18n="pv_harf_2">اللعب على ورقة لا يرسل شيئًا. وملفك محمي برمز استرجاع، فاحفظه ولا تعطه أحدًا.</p><a class="more" href="https://harf.wamdarc.com/privacy.html"><span data-i18n="pv_full">السياسة الكاملة داخل التطبيق</span> <span class="ltr">harf.wamdarc.com</span></a></section><section class="pvapp" id="siraj" style="--c:#6A42D8"><h3><img src="/assets/siraj/icon.webp" alt="" width="40" height="40"><span class="nm">سراج<i aria-hidden="true">|</i><span class="ltr">SIRAJ</span></span></h3><p data-i18n="pv_siraj_1">أسماء أطفالك وأعمارهم وشخصياتهم وسجل القراءة على جهازك. وإذا ربطت أجهزة العائلة تتشفّر البيانات على جهازك بمفتاح مأخوذ من رمز العائلة قبل المزامنة، فلا نستطيع قراءتها.</p><p data-i18n="pv_siraj_2">إذا فعّلت الإشعارات نستقبل اشتراك الإشعارات ونوع الجهاز ووقت النوم والمنطقة الزمنية، بدون أسماء.</p><a class="more" href="https://siraj.wamdarc.com/privacy.html"><span data-i18n="pv_full">السياسة الكاملة داخل التطبيق</span> <span class="ltr">siraj.wamdarc.com</span></a></section><section class="pvapp" id="nabd" style="--c:#7C4DEB"><h3><img src="/assets/nabd/icon.webp" alt="" width="40" height="40"><span class="nm">نبض<i aria-hidden="true">|</i><span class="ltr">NABD</span></span></h3><p data-i18n="pv_nabd_1">كل محتوى نبض يتشفّر على الجهاز بمفتاح العائلة قبل ما يطلع، وما نقدر نقرأه. نوصّل الرسالة المشفّرة ونمسحها أول ما توصل لأجهزة العائلة، ولا تبقى عندنا أكثر من أيام قليلة.</p><p data-i18n="pv_nabd_2">نحفظ ما يلزم لتشغيل العائلة والإشعارات فقط: معرّفات عشوائية، ونوع كل فرد وصلاحياته، ونوع الجهاز وإصداره ومنطقته الزمنية.</p><a class="more" href="https://nabd.wamdarc.com/privacy.html"><span data-i18n="pv_full">السياسة الكاملة داخل التطبيق</span> <span class="ltr">nabd.wamdarc.com</span></a></section>
+    <section><h2 data-i18n="pv_stats_h">عدّاد الاستخدام</h2><p data-i18n="pv_stats_1">لنعرف عدد مستخدمي الموقع والتطبيقات، يرسل كل منها عند الفتح وأثناء الاستخدام إحصائية مجهولة: اسم التطبيق، ومعرّفًا عشوائيًا يولّده جهازك، وهل التطبيق مضاف للشاشة الرئيسية، ونوع الجهاز، ورقم الإصدار، واللغة، وفي الموقع اسم الصفحة.</p><p data-i18n="pv_stats_2">لا يُرسل العدّاد أسماء ولا موقعًا ولا أي محتوى من التطبيق، ولا نحفظ معه عنوان IP ولا نربطه بأي شخص. وتقدر تزيل المعرّف بمسح بيانات الموقع من إعدادات المتصفح.</p></section>
+    <section><h2 data-i18n="pv_kids_h">الأطفال</h2><p data-i18n="pv_kids_1">سراج ونبض موجّهان للوالدين، وإعداداتهما خلف رمز وليّ الأمر. لا نطلب من الطفل أي بيانات، ولا توجد محادثات مع غرباء.</p></section>
+    <section><h2 data-i18n="pv_del_h">حذف بياناتك</h2><p data-i18n="pv_del_1">لأن البيانات على جهازك، يكفي حذف التطبيق من الشاشة الرئيسية أو مسح بيانات الموقع من إعدادات المتصفح. أوقف الإشعارات من داخل التطبيق ليُحذف اشتراكك، ولأي طلب آخر راسلنا.</p></section>
+    <section><h2 data-i18n="pv_chg_h">التعديلات</h2><p data-i18n="pv_chg_1">قد نحدّث هذه الصفحة عند تغيّر ما نحفظه أو نرسله، ونغيّر تاريخ آخر تحديث أعلاها.</p></section>
+    <section><h2 data-i18n="pv_ct_h">تواصل</h2><p data-i18n="pv_ct_1" data-html>لأي سؤال عن الخصوصية راسلنا على <a class="ltr" href="mailto:contact@wamdarc.com">contact@wamdarc.com</a>، أو على بريد التطبيق نفسه.</p></section>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="fbrand">
+      <img class="on-light" src="/assets/logo-horizontal-on-light.svg?v=12" alt="WAMD ARC ومض ارك" width="190" height="30" loading="lazy">
+      <img class="on-dark" src="/assets/logo-horizontal-on-dark.svg?v=12" alt="WAMD ARC ومض ارك" width="190" height="30" loading="lazy">
+      <p data-i18n="foot_tag">تطبيقات صغيرة تخدم يومك وعائلتك.</p>
+    </div>
+    <div><b data-i18n="foot_apps">تطبيقاتنا</b><a href="/sahm/" style="--c:#F5841F"><span class="nm">سهم<i aria-hidden="true">|</i><span class="ltr">SAHM</span></span></a><a href="/falaq/" style="--c:#5B7FA6"><span class="nm">فلق<i aria-hidden="true">|</i><span class="ltr">FALAQ</span></span></a><a href="/khuta/" style="--c:#FF3E8A"><span class="nm">خطى<i aria-hidden="true">|</i><span class="ltr">KHUTA</span></span></a><a href="/harf/" style="--c:#12897C"><span class="nm">حرف<i aria-hidden="true">|</i><span class="ltr">HARF</span></span></a><a href="/siraj/" style="--c:#6A42D8"><span class="nm">سراج<i aria-hidden="true">|</i><span class="ltr">SIRAJ</span></span></a><a href="/nabd/" style="--c:#7C4DEB"><span class="nm">نبض<i aria-hidden="true">|</i><span class="ltr">NABD</span></span></a></div>
+    <div><b data-i18n="foot_co">ومض آرك</b><a href="/#about" data-i18n="nav_about">من نحن</a><a href="/updates/" data-i18n="nav_news">جديدنا</a><a href="/#contact" data-i18n="nav_contact">تواصل معنا</a><a href="/privacy/" data-i18n="privacy">سياسة الخصوصية</a></div>
+  </div>
+  <div class="wrap legal"><span>© <span id="yr">2026</span> WAMD ARC · <span data-i18n="made_in">صُنع في الرياض</span></span><a class="ltr" href="mailto:contact@wamdarc.com">contact@wamdarc.com</a></div>
+</footer>
+<script src="/assets/i18n.js?v=12"></script>
+<script src="/assets/site.js?v=12"></script>
+<script src="/assets/wamd-stats.js?v=12" data-app="site" defer></script>
 </body>
 </html>
