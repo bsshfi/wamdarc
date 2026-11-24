@@ -5,7 +5,7 @@ import os, json, html
 from content import APPS, S, VOWS, NEWS, MONTHS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V = '12'                      # رقم كاش الملفات (?v=)
+V = '13'                      # رقم كاش الملفات (?v=)
 SITE = 'https://wamdarc.com'
 LASTMOD = '2026-11-24'
 A = {a['id']: a for a in APPS}
@@ -80,7 +80,7 @@ def head(path, title_k, desc_k, og='og-image', ld=None, extra=''):
 def nav(home=False):
     h = '' if home else '/'
     links = [('apps', 'nav_apps'), ('promise', 'nav_promise'), ('install', 'nav_install'), ('about', 'nav_about'), ('contact', 'nav_contact')]
-    lis = ''.join(f'<li><a href="{h}#{x}" data-i18n="{k}">{ar(k)}</a></li>' for x, k in links) + f'<li><a href="/updates/" data-i18n="nav_news">{ar("nav_news")}</a></li>'
+    lis = ''.join(f'<li><a href="{h}#{x}" data-i18n="{k}">{ar(k)}</a></li>' for x, k in links) + f'<li><a href="/identity/" data-i18n="nav_id">{ar("nav_id")}</a></li><li><a href="/updates/" data-i18n="nav_news">{ar("nav_news")}</a></li>'
     return f'''<header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="/" aria-label="ومض آرك WAMD ARC">
@@ -109,7 +109,7 @@ def footer():
       {t('foot_tag', 'p')}
     </div>
     <div>{t('foot_apps', 'b')}{apps}</div>
-    <div>{t('foot_co', 'b')}<a href="/#about" data-i18n="nav_about">{ar('nav_about')}</a><a href="/updates/" data-i18n="nav_news">{ar('nav_news')}</a><a href="/#contact" data-i18n="nav_contact">{ar('nav_contact')}</a><a href="/privacy/" data-i18n="privacy">{ar('privacy')}</a></div>
+    <div>{t('foot_co', 'b')}<a href="/#about" data-i18n="nav_about">{ar('nav_about')}</a><a href="/identity/" data-i18n="nav_id">{ar('nav_id')}</a><a href="/updates/" data-i18n="nav_news">{ar('nav_news')}</a><a href="/#contact" data-i18n="nav_contact">{ar('nav_contact')}</a><a href="/privacy/" data-i18n="privacy">{ar('privacy')}</a></div>
   </div>
   <div class="wrap legal"><span>© <span id="yr">2026</span> WAMD ARC · {t('made_in')}</span><a class="ltr" href="mailto:contact@wamdarc.com">contact@wamdarc.com</a></div>
 </footer>
@@ -201,7 +201,7 @@ def home():
 
   <section class="sec about" id="about">
     <div class="wrap about-in">
-      <div>{t('about_h2', 'h2')}{t('about_p1', 'p')}{t('about_p2', 'p')}</div>
+      <div>{t('about_h2', 'h2')}{t('about_p1', 'p')}{t('about_p2', 'p')}<p class="idlink"><a href="/identity/"><span data-i18n="id_more">{ar('id_more')}</span> <span aria-hidden="true">←</span></a></p></div>
       <aside class="idea">{t('idea_t', 'b')}{t('idea_d')}<a class="btn ghost sm" href="#contact" data-topic="idea" data-i18n="idea_b">{ar('idea_b')}</a></aside>
     </div>
   </section>
@@ -338,6 +338,83 @@ def news():
 '''
     return head('/updates/', 'title_news', 'desc_news') + body + footer()
 
+
+# ---------- هويتنا ----------
+def identity():
+    lis = lambda ks: ''.join(f'<li>{t(k, raw=True)}</li>' for k in ks)
+    steps = ''.join(f'<div class="st"><span class="sn ltr">{en_}</span>{t(f"id_s{n}t", "h3")}{t(f"id_s{n}d", "p")}</div>' for n, en_ in ((1, 'WAMD'), (2, 'ARC'), (3, 'TOMORROW')))
+    parts = ''.join(f'<li><i style="background:{c}"></i><div>{t(f"id_l{n}t", "b")}{t(f"id_l{n}d")}</div></li>' for n, c in ((1, '#7B4BF0'), (2, 'linear-gradient(120deg,#5A2CD8,#9B52D8 55%,#FF8A2A)'), (3, '#FF8A2A'), (4, 'var(--text)')))
+    cols = ''.join(f'<div class="sw"><i style="background:{hx}"></i>{t(f"id_c{n}", "b")}{t(f"id_c{n}d", "small")}<code class="ltr">{hx}</code></div>' for n, hx in enumerate(('#0E0A2B', '#4B23C8', '#7B4BF0', '#FF8A2A', '#EEEAF8'), 1))
+    fam = ''.join(f'<a href="/{a["id"]}/" style="--c:{a["color"]}">{icon(a, 72)}<span class="nm2">{nm(a)}</span></a>' for a in APPS)
+    story = ''.join(f'<li>{t(f"id_st{n}t", "b")}{t(f"id_st{n}d", "p")}' + ('<div class="short"><span class="ltr">وَثْب · WATHB</span><span class="ltr">سَنا · SANA</span><span class="ltr pick">وَمْض · WAMD</span><span class="ltr">نَوْل · NAWL</span></div>' if n == 3 else '') + '</li>' for n in range(1, 6))
+    body = f'''{nav()}
+<main id="main" class="doc idp">
+  <section class="dhead idhead"><div class="dsky" aria-hidden="true"></div><div class="wrap">
+    <img class="idlogo on-light" src="/assets/logo-horizontal-on-light.svg?v={V}" alt="WAMD ARC ومض ارك" width="1370" height="214">
+    <img class="idlogo on-dark" src="/assets/logo-horizontal-on-dark.svg?v={V}" alt="WAMD ARC ومض ارك" width="1370" height="214">
+    {t('id_h1', 'h1')}{t('id_sub', 'p', 'idsub')}{t('id_intro', 'p')}
+    <div class="formula" aria-hidden="true">
+      <span class="t">وَمْض<small data-i18n="id_f_w">{ar('id_f_w')}</small></span><b>+</b>
+      <span class="t ltr">ARC<small data-i18n="id_f_a">{ar('id_f_a')}</small></span><b>=</b>
+      <span class="t res ltr">WAMD ARC<small data-i18n="id_f_r">{ar('id_f_r')}</small></span>
+    </div>
+  </div></section>
+
+  <section class="sec idsec"><div class="wrap">
+    <div class="head">{t('id_or_h2', 'h2')}</div>
+    <div class="halves">
+      <article class="half w">
+        <div class="word">وَمْض</div>{t('id_w_gloss', 'p', 'gloss')}
+        <blockquote>{t('id_w_quote', 'p')}{t('id_w_cite', 'cite')}</blockquote>
+        {t('id_w_mh', 'h3')}<ul>{lis(['id_w_m1', 'id_w_m2'])}</ul>
+        {t('id_w_fam', 'p', 'fam')}
+        {t('id_w_wh', 'h3')}<ul>{lis(['id_w_y1', 'id_w_y2'])}</ul>
+      </article>
+      <article class="half a">
+        <div class="word ltr">ARC</div>{t('id_a_gloss', 'p', 'gloss')}
+        {t('id_a_mh', 'h3')}<ul>{lis(['id_a_m1', 'id_a_m2', 'id_a_m3'])}</ul>
+        {t('id_a_wh', 'h3')}<ul>{lis(['id_a_y1', 'id_a_y2'])}</ul>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="sec idsec alt"><div class="wrap">
+    <div class="head">{t('id_idea_h2', 'h2')}{t('id_idea_sub', 'p')}</div>
+    <div class="steps3">{steps}</div>
+    <div class="taglines">
+      <div>{t('id_tag1l', 'small')}{t('id_tag1', 'b')}<span class="ltr">Shaping a Smarter Tomorrow</span></div>
+      <div>{t('id_tag2l', 'small')}{t('id_tag2', 'b')}<span class="ltr">Beyond Limits</span></div>
+    </div>
+  </div></section>
+
+  <section class="sec idsec"><div class="wrap">
+    <div class="head">{t('id_logo_h2', 'h2')}</div>
+    <div class="anat">
+      <figure class="markfig"><img src="/assets/mark.webp?v={V}" alt="" width="840" height="366"></figure>
+      <ul class="parts">{parts}</ul>
+    </div>
+    <div class="idsub2">{t('id_col_h3', 'h3')}<div class="swatches">{cols}</div></div>
+    <div class="idsub2 typo">{t('id_type_h3', 'h3')}<div class="tyrow"><span class="ty ar">ومض آرك</span><span class="ty ltr">WAMD ARC</span></div>{t('id_type_d', 'p')}</div>
+  </div></section>
+
+  <section class="sec idsec alt"><div class="wrap">
+    <div class="head">{t('id_fam_h2', 'h2')}{t('id_fam_sub', 'p')}</div>
+    <div class="famrow">{fam}</div>
+  </div></section>
+
+  <section class="sec idsec"><div class="wrap narrow">
+    <div class="head">{t('id_story_h2', 'h2')}</div>
+    <ol class="story">{story}</ol>
+  </div></section>
+
+  <section class="sec faq idsec alt"><div class="wrap faq-in">
+    <div class="head">{t('id_faq_h2', 'h2')}</div>
+    <div class="qa">{faq_list([(f'id_q{n}', f'id_a{n}') for n in (1, 2, 3)])}</div>
+  </div></section>
+</main>
+'''
+    return head('/identity/', 'title_id', 'desc_id') + body + footer()
+
 # ---------- الخصوصية ----------
 def privacy():
     apps = ''
@@ -375,7 +452,7 @@ def simple(path, title_k, h_k, p_k, show_apps=False):
     return head(path, title_k, p_k, extra=extra) + body + footer()
 
 def sitemap():
-    urls = ['/'] + [f'/{a["id"]}/' for a in APPS] + ['/updates/', '/privacy/']
+    urls = ['/'] + [f'/{a["id"]}/' for a in APPS] + ['/identity/', '/updates/', '/privacy/']
     rows = ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{LASTMOD}</lastmod><xhtml:link rel="alternate" hreflang="ar" href="{SITE}{u}"/><xhtml:link rel="alternate" hreflang="en" href="{SITE}{u}?lang=en"/></url>\n' for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n{rows}</urlset>\n'
 
@@ -387,6 +464,7 @@ def write(rel, s):
 if __name__ == '__main__':
     write('index.html', home())
     for a in APPS: write(f'{a["id"]}/index.html', app_page(a))
+    write('identity/index.html', identity())
     write('updates/index.html', news())
     write('privacy/index.html', privacy())
     write('thanks.html', simple('/thanks.html', 'title_th', 'th_h1', 'th_p'))
